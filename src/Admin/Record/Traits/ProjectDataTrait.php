@@ -18,10 +18,12 @@ namespace Admin\Record\Traits;
  * @property  string  description
  * @property  integer is_public
  * @property  integer state
+ * @property  integer ordering
  * @property  string  created
  * @property  integer created_by
  * @property  string  modified
  * @property  integer modified_by
+ * @property  string  language
  * @property  string  params
  *
  * @since  1.1

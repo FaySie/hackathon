@@ -9,6 +9,7 @@
 use Admin\DataMapper\ProjectImageMapMapper;
 use Admin\DataMapper\ProjectMapper;
 use Admin\DataMapper\TaskImageMapMapper;
+use Admin\DataMapper\TaskLinkMapMapper;
 use Admin\DataMapper\TaskMapper;
 use Admin\Table\Table;
 use Faker\Factory;
@@ -69,10 +70,24 @@ class TaskSeeder extends AbstractSeeder
 					$data['project_id'] = $project->id;
 					$data['task_id']    = $task->id;
 					$data['image_id']   = $image->id;
-					$data['ordering']   = $j;
+					$data['ordering']   = $j + 1;
 					$data['params']     = '';
 
-					TaskImageMapMapper::createOne($data);
+					$taskImage = TaskImageMapMapper::createOne($data);
+
+					$data = new Data;
+
+					$data['project_id'] = $project->id;
+					$data['task_id']    = $task->id;
+					$data['image_id']   = $taskImage->id;
+					$data['top']        = 250;
+					$data['left']       = 350;
+					$data['width']      = 100;
+					$data['height']     = 50;
+					$data['ordering']   = 1;
+					$data['params']     = '';
+
+					TaskLinkMapMapper::createOne($data);
 				}
 
 				$this->outCounting();
@@ -88,5 +103,7 @@ class TaskSeeder extends AbstractSeeder
 	public function doClear()
 	{
 		$this->truncate(Table::TASKS);
+		$this->truncate(Table::TASK_IMAGE_MAPS);
+		$this->truncate(Table::TASK_LINK_MAPS);
 	}
 }

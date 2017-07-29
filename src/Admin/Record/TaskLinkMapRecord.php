@@ -8,26 +8,26 @@
 
 namespace Admin\Record;
 
-use Admin\Record\Traits\TaskImageMapDataTrait;
+use Admin\Record\Traits\TaskLinkMapDataTrait;
 use Admin\Table\Table;
 use Windwalker\Event\Event;
 use Windwalker\Record\Record;
 
 /**
- * The TaskImageMapRecord class.
+ * The TaskLinkMapRecord class.
  *
  * @since  1.0
  */
-class TaskImageMapRecord extends Record
+class TaskLinkMapRecord extends Record
 {
-	use TaskImageMapDataTrait;
+	use TaskLinkMapDataTrait;
 
 	/**
 	 * Property table.
 	 *
 	 * @var  string
 	 */
-	protected $table = Table::TASK_IMAGE_MAPS;
+	protected $table = Table::TASK_LINK_MAPS;
 
 	/**
 	 * Property keys.

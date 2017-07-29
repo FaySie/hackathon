@@ -56,6 +56,24 @@ class TaskInit extends AbstractMigration
 			$schema->addIndex('task_id');
 			$schema->addIndex('image_id');
 		});
+
+		$this->createTable(Table::TASK_LINK_MAPS, function(Schema $schema)
+		{
+			$schema->primary('id')->comment('Primary Key');
+			$schema->integer('project_id')->comment('Project ID');
+			$schema->integer('task_id')->comment('Task ID');
+			$schema->integer('image_id')->comment('Image ID');
+			$schema->integer('top')->comment('Top');
+			$schema->integer('left')->comment('Left');
+			$schema->integer('width')->comment('Width');
+			$schema->integer('height')->comment('Height');
+			$schema->integer('ordering')->comment('Ordering');
+			$schema->text('params')->comment('Params');
+
+			$schema->addIndex('project_id');
+			$schema->addIndex('task_id');
+			$schema->addIndex('image_id');
+		});
 	}
 
 	/**
@@ -64,5 +82,7 @@ class TaskInit extends AbstractMigration
 	public function down()
 	{
 		$this->drop(Table::TASKS);
+		$this->drop(Table::TASK_IMAGE_MAPS);
+		$this->drop(Table::TASK_LINK_MAPS);
 	}
 }

@@ -77,5 +77,6 @@ class ProjectSeeder extends AbstractSeeder
 	public function doClear()
 	{
 		$this->truncate(Table::PROJECTS);
+		$this->truncate(Table::PROJECT_IMAGE_MAPS);
 	}
 }
