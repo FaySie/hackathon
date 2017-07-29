@@ -51,20 +51,56 @@
     <div class="container">
         <div class="row">
             <div class="feedback-row">
-                <button class="fa fa-font feedback-text"></button>
-        <span class="feedback-text-content">
-            <ul>
-                <li>WTF</li>
-                <li>Suck!</li>
-                <li>Awesome</li>
-                <li>Perfect</li>
-            </ul>
-        </span>
-                <button class="pg pg-like"></button>
-                <button class="fa fa-cloud"></button>
-                <button class="fa fa-comment-o"></button>
-                <button class="fa fa-frown-o"></button>
-                <button class="fa fa-magnet"></button>
+                <div class="emoji with-dropdown">
+                    <input type="checkbox" value="1" id="checkbox1">
+                    <label class="feedback-text" for="checkbox1">
+                        <i class="fa fa-font"></i>
+                    </label>
+                     <span class="feedback-text-content">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    WTF
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Suck!
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    good
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    outstanding
+                                </a>
+                            </li>
+                        </ul>
+                    </span>
+                </div>
+                <div class="emoji">
+                    <input type="checkbox" value="1" id="checkbox1">
+                    <label class="pg pg-like" for="checkbox1"></label>
+                </div>
+                <div class="emoji">
+                    <input type="checkbox" value="2" id="checkbox2">
+                    <label class="fa fa-cloud" for="checkbox2"></label>
+                </div>
+                <div class="emoji">
+                    <input type="checkbox" value="3" id="checkbox3">
+                    <label class="fa fa-comment-o" for="checkbox3"></label>
+                </div>
+                <div class="emoji">
+                    <input type="checkbox" value="4" id="checkbox4">
+                    <label class="fa fa-frown-o" for="checkbox4"></label>
+                </div>
+                <div class="emoji">
+                    <input type="checkbox" value="5" id="checkbox5">
+                    <label class="fa fa-magnet" for="checkbox5"></label>
+                </div>
             </div>
         </div>
     </div>

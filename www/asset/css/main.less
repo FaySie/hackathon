@@ -130,6 +130,7 @@
 		left : 0;
 		top: 0;
 		transition: all .3s;
+		z-index : 2;
 
 		&:before {
 			content: '';
@@ -150,6 +151,11 @@
 
 		&.start-test {
 			opacity: 0;
+			z-index: -1;
+
+			&:before {
+				content: none;
+			}
 		}
 	}
 
@@ -157,12 +163,11 @@
 		position : absolute;
 		bottom: 30px;
 		left : 30px;
-		z-index : -1;
 	}
 
 	.feedback-text-content {
 		display: none;
-		bottom: 20px;
+		bottom: 30px;
 		left : 0;
 		position : absolute;
 
@@ -172,9 +177,32 @@
 		}
 	}
 
-	.feedback-text:hover {
-		& + .feedback-text-content {
-			display: inline-block;
+	.emoji {
+		display: inline-block;
+
+		label {
+			opacity: .5;
+			cursor: pointer;
+			font-size: 20px;
+			margin: 5px;
+
+			i:hover {
+				opacity: 1;
+			}
+		}
+
+		input {
+			display: none;
+
+			&:checked + label {
+				opacity: 1;
+			}
+		}
+
+		&.with-dropdown:hover {
+			.feedback-text-content {
+				display: inline-block;
+			}
 		}
 	}
 }
