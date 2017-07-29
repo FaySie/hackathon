@@ -39,9 +39,9 @@ class HomeHtmlView extends ListView
 
 		foreach ($data->items as $item)
 		{
-			$item->images = TaskImageMapMapper::addTable('product_image_map', Table::PROJECT_IMAGE_MAPS, 'task_image_map.project_id = product_image_map.project_id')
-				->find(['task_image_map.project_id' => $item->project_id], 'task_image_map.ordering ASC')
-				->image;
+			$item->image = TaskImageMapMapper::addTable('product_image_map', Table::PROJECT_IMAGE_MAPS, 'task_image_map.project_id = product_image_map.project_id')
+				->findOne(['task_image_map.project_id' => $item->project_id], 'task_image_map.ordering ASC')
+				->product_image_map_image;
 		}
 
 		$this->prepareScripts();
