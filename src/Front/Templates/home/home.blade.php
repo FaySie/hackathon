@@ -24,8 +24,23 @@
 @extends('_global.html')
 
 @section('content')
-<div class="container home-item">
-    <h1>Home List</h1>
+    <div class="container-fluid m-t-100">
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                @foreach ($items as $i => $item)
+                    <div class="swiper-slide" style="background-image: url('{{ $item->image }}')"></div>
+                @endforeach
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    <div class="container home-item m-t-100">
     <div class="home-items">
         <div class="row">
             @foreach ($items as $i => $item)
@@ -38,19 +53,32 @@
                     <a href="{{ $router->route('home', ['id' => $item->id]) }}" class="card-layout">
                         <div class="card-thumbnail">
                             <img src="{{ $item->image }}" alt="Accusamus.">
+                            <div class="project-intro">
+                                test test test test test test
+
+                                <span class="project-title">
+                                    test test test test test test
+                                </span>
+                            </div>
                         </div>
                         <div class="card-content">
                             <h5 class="dotdotdot" data-lines="2" style="word-wrap: break-word;">
                                 {{ $item->title }}
                             </h5>
-                            <div class="card-info left">
-                                <i class="pg pg-clock"></i>
-                                210
-                            </div>
-                            <div class="card-info right">
+                        </div>
+                        <div class="card-info">
+                             <span>
+                                 <i class="pg pg-clock"></i>
+                                 210
+                             </span>
+                            <span>
                                 <i class="fa fa-user"></i>
                                 508
-                            </div>
+                            </span>
+                            <span class="star-score">
+                                <i class="fa fa-user"></i>
+                                508
+                            </span>
                         </div>
                     </a>
                 </div>

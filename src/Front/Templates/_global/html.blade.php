@@ -106,15 +106,15 @@
         <div class="content ">
             <!-- START PAGE COVER -->
             <div class="container-fluid container-fixed-lg">
-                <ul class="breadcrumb">
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li><a href="#" class="active">Horizontal Menu</a>
-                    </li>
-                </ul>
+                {{--<ul class="breadcrumb">--}}
+                    {{--<li>--}}
+                        {{--<a href="#">Home</a>--}}
+                    {{--</li>--}}
+                    {{--<li><a href="#" class="active">Horizontal Menu</a>--}}
+                    {{--</li>--}}
+                {{--</ul>--}}
                 <!-- END BREADCRUMB -->
-                <h3 class="page-title">Page Title</h3>
+                {{--<h3 class="page-title">Page Title</h3>--}}
             </div>
             <div class="container-fluid container-fixed-lg">
                 <!-- YOU CAN REMOVE .container-fixed-lg TO DISABLE THE FEATURE WHERE THE CONTENT
@@ -132,20 +132,20 @@
         <!-- START COPYRIGHT -->
         <!-- START CONTAINER FLUID -->
         <!-- START CONTAINER FLUID -->
-        <div class="container-fluid container-fixed-lg footer">
-            <div class="copyright sm-text-center">
-                <p class="small no-margin pull-left sm-pull-reset">
-                    <span class="hint-text">Copyright &copy; 2014 </span>
-                    <span class="font-montserrat">REVOX</span>.
-                    <span class="hint-text">All rights reserved. </span>
-                    <span class="sm-block"><a href="#" class="m-l-10 m-r-10">Terms of use</a> | <a href="#" class="m-l-10">Privacy Policy</a></span>
-                </p>
-                <p class="small no-margin pull-right sm-pull-reset">
-                    <a href="#">Hand-crafted</a> <span class="hint-text">&amp; Made with Love ®</span>
-                </p>
-                <div class="clearfix"></div>
-            </div>
-        </div>
+        {{--<div class="container-fluid container-fixed-lg footer">--}}
+            {{--<div class="copyright sm-text-center">--}}
+                {{--<p class="small no-margin pull-left sm-pull-reset">--}}
+                    {{--<span class="hint-text">Copyright &copy; 2014 </span>--}}
+                    {{--<span class="font-montserrat">REVOX</span>.--}}
+                    {{--<span class="hint-text">All rights reserved. </span>--}}
+                    {{--<span class="sm-block"><a href="#" class="m-l-10 m-r-10">Terms of use</a> | <a href="#" class="m-l-10">Privacy Policy</a></span>--}}
+                {{--</p>--}}
+                {{--<p class="small no-margin pull-right sm-pull-reset">--}}
+                    {{--<a href="#">Hand-crafted</a> <span class="hint-text">&amp; Made with Love ®</span>--}}
+                {{--</p>--}}
+                {{--<div class="clearfix"></div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
         <!-- END COPYRIGHT -->
     </div>
     <!-- END PAGE CONTENT WRAPPER -->
