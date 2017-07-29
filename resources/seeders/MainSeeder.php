@@ -8,6 +8,8 @@
 
 use Windwalker\Core\Seeder\AbstractSeeder;
 
+date_default_timezone_set('UTC');
+
 /**
  * The MainSeeder class.
  * 
