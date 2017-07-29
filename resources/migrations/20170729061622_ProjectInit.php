@@ -26,6 +26,8 @@ class ProjectInit extends AbstractMigration
 			$schema->varchar('title')->comment('Title');
 			$schema->varchar('alias')->comment('Alias');
 			$schema->char('type')->length(3)->comment('app or web');
+			$schema->integer('likes')->comment('Likes');
+			$schema->integer('hits')->comment('Hits');
 			$schema->text('description')->comment('Description');
 			$schema->tinyint('is_public')->signed(true)->comment('0: no, 1:yes');
 			$schema->tinyint('state')->signed(true)->comment('0: unpublished, 1:published');
@@ -51,6 +53,17 @@ class ProjectInit extends AbstractMigration
 
 			$schema->addIndex('project_id');
 		});
+
+		$this->createTable(Table::USER_PROJECT_LIKE_MAPS, function(Schema $schema)
+		{
+			$schema->primary('id')->comment('Primary Key');
+			$schema->integer('user_id')->comment('User ID');
+			$schema->integer('project_id')->comment('Project ID');
+			$schema->text('params')->comment('Params');
+
+			$schema->addIndex('user_id');
+			$schema->addIndex('project_id');
+		});
 	}
 
 	/**
@@ -60,5 +73,6 @@ class ProjectInit extends AbstractMigration
 	{
 		$this->drop(Table::PROJECTS);
 		$this->drop(Table::PROJECT_IMAGE_MAPS);
+		$this->drop(Table::USER_PROJECT_LIKE_MAPS);
 	}
 }
