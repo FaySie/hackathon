@@ -69,6 +69,14 @@ class EditDefinition extends AbstractFieldDefinition
 				->required(true);
 		});
 
+		// Images fieldset
+		$this->fieldset('images', function(Form $form)
+		{
+			// Image
+//			$this->file('image')
+//				->label(Translator::translate('admin.project.field.image'));
+		});
+
 		// Created fieldset
 		$this->fieldset('created', function(Form $form)
 		{

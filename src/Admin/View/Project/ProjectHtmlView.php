@@ -8,6 +8,7 @@
 
 namespace Admin\View\Project;
 
+use Admin\DataMapper\ProjectImageMapMapper;
 use Phoenix\Script\BootstrapScript;
 use Phoenix\Script\PhoenixScript;
 use Phoenix\View\EditView;
@@ -67,6 +68,8 @@ class ProjectHtmlView extends EditView
 	protected function prepareData($data)
 	{
 		parent::prepareData($data);
+
+		$data->item->images = ProjectImageMapMapper::find(['project_id' => $data->item->id])->image;
 
 		$this->prepareScripts();
 		$this->prepareMetadata();
