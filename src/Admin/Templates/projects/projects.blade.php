@@ -61,15 +61,19 @@
                         {!! $grid->sortTitle('admin.project.field.state', 'project.state') !!}
                     </th>
 
+                    {{-- IS_PUBLIC --}}
+                    <th style="min-width: 90px;"  width="10%">
+                        {!! $grid->sortTitle('admin.project.field.is_public', 'project.is_public') !!}
+                    </th>
+
                     {{-- TITLE --}}
                     <th>
                         {!! $grid->sortTitle('admin.project.field.title', 'project.title') !!}
                     </th>
 
-                    {{-- ORDERING --}}
-                    <th width="5%" class="text-nowrap">
-                        {!! $grid->sortTitle('admin.project.field.ordering', 'project.ordering') !!}
-                        {!! $grid->saveOrderButton() !!}
+                    {{-- TYPE --}}
+                    <th>
+                        {!! $grid->sortTitle('admin.project.field.type', 'project.type') !!}
                     </th>
 
                     {{-- AUTHOR --}}
@@ -80,11 +84,6 @@
                     {{-- CREATED --}}
                     <th width="10%" class="text-nowrap">
                         {!! $grid->sortTitle('admin.project.field.created', 'project.created') !!}
-                    </th>
-
-                    {{-- LANGUAGE --}}
-                    <th width="7%" class="text-nowrap">
-                        {!! $grid->sortTitle('admin.project.field.language', 'project.language') !!}
                     </th>
 
                     {{-- ID --}}
@@ -120,6 +119,17 @@
                             </span>
                         </td>
 
+                        {{-- IS_PUBLIC --}}
+                        <td>
+
+                            @if($item->is_public)
+                                @translate('admin.project.field.is_public.yes')
+                            @else
+                                @translate('admin.project.field.is_public.no')
+                            @endif
+
+                        </td>
+
                         {{-- TITLE --}}
                         <td>
                             <a href="{{ $router->route('project', ['id' => $item->id]) }}">
@@ -127,9 +137,9 @@
                             </a>
                         </td>
 
-                        {{-- ORDERING --}}
+                        {{-- TYPE --}}
                         <td>
-                            {!! $grid->orderButton() !!}
+                            @translate('admin.project.field.type.' . $item->type)
                         </td>
 
                         {{-- AUTHOR --}}
@@ -142,11 +152,6 @@
                             <span class="hasTooltip" title="{{ $datetime::toLocalTime($item->created, 'Y-m-d H:i:s') }}">
                                 {{ $datetime::toLocalTime($item->created, 'Y-m-d') }}
                             </span>
-                        </td>
-
-                        {{-- LANGUAGE --}}
-                        <td>
-                            {{ $item->language }}
                         </td>
 
                         {{-- ID --}}

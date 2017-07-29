@@ -10,6 +10,8 @@ namespace Admin\Form\Project;
 
 use Admin\Field\Project\ProjectListField;
 use Admin\Field\Project\ProjectModalField;
+use Lyrasoft\Luna\Field\Editor\TinymceEditorField;
+use Lyrasoft\Warder\Admin\Field\User\UserModalField;
 use Phoenix\Form\PhoenixFieldTrait;
 use Windwalker\Core\Form\AbstractFieldDefinition;
 use Windwalker\Core\Language\Translator;
@@ -52,38 +54,19 @@ class EditDefinition extends AbstractFieldDefinition
 			$this->text('alias')
 				->label(Translator::translate('admin.project.field.alias'));
 
-			// Image
-			$this->text('image')
-				->label(Translator::translate('admin.project.field.image'));
+			// Type
+			$this->list('type')
+				->label(Translator::translate('admin.project.field.type'))
+				->addClass('hasChosen')
+				->option(Translator::translate('admin.project.field.type.app'), 'app')
+				->option(Translator::translate('admin.project.field.type.web'), 'web')
+				->required(true);
 
-			// URL
-			$this->text('url')
-				->label(Translator::translate('admin.project.field.url'))
-				->addValidator(Rule\UrlValidator::class)
-				->set('class', 'validate-url');
-
-			// Example: Project List
-			$this->add('project_list', ProjectListField::class)
-				->label('List Example')
-				->addClass('hasChosen');
-
-			// Example: Project Modal
-			$this->add('project_modal', ProjectModalField::class)
-				->label('Modal Example');
-		});
-
-		// Text Fieldset
-		$this->fieldset('text', function(Form $form)
-		{
-			// Introtext
-			$this->textarea('introtext')
-				->label(Translator::translate('admin.project.field.introtext'))
-				->rows(10);
-
-			// Fulltext
-			$this->textarea('fulltext')
-				->label(Translator::translate('admin.project.field.fulltext'))
-				->rows(10);
+			// Description
+			$this->add('description', TinymceEditorField::class)
+				->label(Translator::translate('admin.project.field.description'))
+				->rows(10)
+				->required(true);
 		});
 
 		// Created fieldset
@@ -92,28 +75,38 @@ class EditDefinition extends AbstractFieldDefinition
 			// State
 			$this->radio('state')
 				->label(Translator::translate('admin.project.field.state'))
-				->addClass('btn-group hasChosen')
+				->addClass('btn-group')
 				->defaultValue(1)
 				->option(Translator::translate('phoenix.grid.state.published'), '1')
 				->option(Translator::translate('phoenix.grid.state.unpublished'), '0');
 
+			// Is Public
+			$this->radio('is_public')
+				->label(Translator::translate('admin.project.field.is_public'))
+				->addClass('btn-group')
+				->defaultValue(1)
+				->option(Translator::translate('admin.project.field.is_public.yes'), '1')
+				->option(Translator::translate('admin.project.field.is_public.no'), '0');
+
+			// Author
+			$this->add('created_by', UserModalField::class)
+				->label(Translator::translate('admin.project.field.author'))
+				->readonly();
+
 			// Created
 			$this->calendar('created')
-				->label(Translator::translate('admin.project.field.created'));
+				->label(Translator::translate('admin.project.field.created'))
+				->readonly();
+
+			// Modified User
+			$this->add('modified_by', UserModalField::class)
+				->label(Translator::translate('admin.project.field.modifiedby'))
+				->readonly();
 
 			// Modified
 			$this->calendar('modified')
 				->label(Translator::translate('admin.project.field.modified'))
-				->disabled();
-
-			// Author
-			$this->text('created_by')
-				->label(Translator::translate('admin.project.field.author'));
-
-			// Modified User
-			$this->text('modified_by')
-				->label(Translator::translate('admin.project.field.modifiedby'))
-				->disabled();
+				->readonly();
 		});
 	}
 }
