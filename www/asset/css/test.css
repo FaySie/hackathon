@@ -1,0 +1,22 @@
+.layout-test .header {
+  display: none;
+}
+.layout-test .page-container .page-content-wrapper .content {
+  padding-top: 0;
+}
+.layout-test .browser-navigation {
+  background-color: #fff;
+  width: 100%;
+}
+.layout-test .task-intro {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+.layout-test .feedback-row {
+  position: absolute;
+  bottom: 80px;
+}
+.layout-test .feedback-text-content {
+  display: none;
+}

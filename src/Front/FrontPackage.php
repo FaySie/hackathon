@@ -56,11 +56,13 @@ class FrontPackage extends AbstractPackage
 		Asset::addCSS('theme/assets/plugins/jquery-scrollbar/jquery.scrollbar.css');
 		Asset::addCSS('theme/pages/css/pages-icons.css');
 		Asset::addCSS('theme/pages/css/pages.css');
+		Asset::addCSS('css/test.css');
 
 		Asset::addJS('theme/assets/plugins/modernizr.custom.js');
 		Asset::addJS('theme/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js');
 		Asset::addJS('theme/pages/js/pages.min.js');
 		Asset::addJS('theme/assets/js/scripts.js');
+		Asset::addJS('jss/test.js');
 
 		// Language
 		TranslatorHelper::loadAll($this, 'ini');
