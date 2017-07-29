@@ -23,5 +23,7 @@ abstract class Table
 
 	const TASK_IMAGE_MAPS = 'task_image_maps';
 
+	const TASK_LINK_MAPS = 'task_link_maps';
+
 	// @muse-placeholder  db-table  Do not remove this.
 }
