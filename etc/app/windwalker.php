@@ -22,10 +22,12 @@ return [
 	 */
 	'packages' => [
 		'phoenix' => \Phoenix\PhoenixPackage::class,
+		'warder'  => \Lyrasoft\Warder\WarderPackage::class,
+		'luna'    => \Lyrasoft\Luna\LunaPackage::class,
+		'unidev'  => \Lyrasoft\Unidev\UnidevPackage::class,
 
-		'flower' => \Asuka\Flower\FlowerPackage::class,
-		'fsimple' => \Asuka\Fsimple\FsimplePackage::class,
-		'fempty' => \Asuka\Fempty\FemptyPackage::class
+		'admin' => \Admin\AdminPackage::class,
+		'front' => \Front\FrontPackage::class
 	],
 
 	/*

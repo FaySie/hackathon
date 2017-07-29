@@ -1,3 +1,9 @@
-main:
+# Routing of package: admin
+admin:
+    pattern: /admin
+    package: admin
+
+# Routing of package: front
+front:
     pattern: /
-    package: main
+    package: front
