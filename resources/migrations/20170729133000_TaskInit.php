@@ -23,23 +23,23 @@ class TaskInit extends AbstractMigration
 		$this->createTable(Table::TASKS, function(Schema $schema)
 		{
 			$schema->primary('id')->comment('Primary Key');
+			$schema->integer('project_id')->comment('Project ID');
 			$schema->varchar('title')->comment('Title');
 			$schema->varchar('alias')->comment('Alias');
-			$schema->varchar('url')->comment('URL');
-			$schema->text('introtext')->comment('Intro Text');
-			$schema->text('fulltext')->comment('Full Text');
-			$schema->varchar('image')->comment('Main Image');
+			$schema->varchar('ideal_time')->comment('Ideal Time');
+			$schema->varchar('ideal_hits')->comment('Ideal Hits');
+			$schema->text('description')->comment('Description');
 			$schema->tinyint('state')->signed(true)->comment('0: unpublished, 1:published');
 			$schema->integer('ordering')->comment('Ordering');
 			$schema->datetime('created')->comment('Created Date');
 			$schema->integer('created_by')->comment('Author');
 			$schema->datetime('modified')->comment('Modified Date');
 			$schema->integer('modified_by')->comment('Modified User');
-			$schema->char('language')->length(7)->comment('Language');
 			$schema->text('params')->comment('Params');
 
 			$schema->addIndex('alias');
-			$schema->addIndex('language');
+			$schema->addIndex('project_id');
+			$schema->addIndex('state');
 			$schema->addIndex('created_by');
 		});
 	}
