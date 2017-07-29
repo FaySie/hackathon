@@ -26,7 +26,7 @@ return [
 	],
 
 	'listeners' => [
-		'orphans' => \Phoenix\Listener\DumpOrphansListener::class
+		// 'orphans' => \Phoenix\Listener\DumpOrphansListener::class
 	],
 
 	'console' => [

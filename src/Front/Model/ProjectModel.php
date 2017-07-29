@@ -8,17 +8,15 @@
 
 namespace Front\Model;
 
-use Front\Record\ProjectRecord;
-use Phoenix\Model\AdminModel;
+use Phoenix\Model\ItemModel;
 use Windwalker\Data\DataInterface;
-use Windwalker\Record\Record;
 
 /**
  * The ProjectModel class.
  * 
  * @since  1.0
  */
-class ProjectModel extends AdminModel
+class ProjectModel extends ItemModel
 {
 	/**
 	 * Property name.
@@ -28,91 +26,13 @@ class ProjectModel extends AdminModel
 	protected $name = 'Project';
 
 	/**
-	 * Property record.
-	 *
-	 * @var  string
-	 */
-	protected $record = 'Project';
-
-	/**
-	 * Property mapper.
-	 *
-	 * @var  string
-	 */
-	protected $mapper = 'Project';
-
-	/**
-	 * Property reorderConditions.
-	 *
-	 * @var  array
-	 */
-	protected $reorderConditions = [];
-
-	/**
-	 * Property reorderPosition.
-	 *
-	 * @var  string
-	 */
-	protected $reorderPosition = self::ORDER_POSITION_LAST;
-
-	/**
 	 * postGetItem
 	 *
-	 * @param DataInterface|ProjectRecord $item
+	 * @param DataInterface $item
 	 *
 	 * @return  void
 	 */
 	protected function postGetItem(DataInterface $item)
 	{
-		// Do some stuff
-	}
-
-	/**
-	 * prepareRecord
-	 *
-	 * @param Record|ProjectRecord $record
-	 *
-	 * @return  void
-	 */
-	protected function prepareRecord(Record $record)
-	{
-		parent::prepareRecord($record);
-	}
-
-	/**
-	 * postSaveHook
-	 *
-	 * @param Record|ProjectRecord $record
-	 *
-	 * @return  void
-	 */
-	protected function postSaveHook(Record $record)
-	{
-		parent::postSaveHook($record);
-	}
-
-	/**
-	 * getReorderConditions
-	 *
-	 * @param Record|ProjectRecord $record
-	 *
-	 * @return  array  An array of conditions to add to ordering queries.
-	 */
-	public function getReorderConditions(Record $record)
-	{
-		return parent::getReorderConditions($record);
-	}
-
-	/**
-	 * Method to set new item ordering as first or last.
-	 *
-	 * @param   Record|ProjectRecord $record   Item table to save.
-	 * @param   string              $position `first` or other are `last`.
-	 *
-	 * @return  void
-	 */
-	public function setOrderPosition(Record $record, $position = self::ORDER_POSITION_LAST)
-	{
-		parent::setOrderPosition($record, $position);
 	}
 }

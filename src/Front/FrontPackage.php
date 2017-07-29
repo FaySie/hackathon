@@ -10,12 +10,10 @@ namespace Front;
 
 use Phoenix\Language\TranslatorHelper;
 use Phoenix\Script\BootstrapScript;
-use Windwalker\Core\Asset\Asset;
 use Windwalker\Core\Package\AbstractPackage;
 use Windwalker\Core\Router\MainRouter;
 use Windwalker\Debugger\Helper\DebuggerHelper;
 use Windwalker\Filesystem\Folder;
-use Windwalker\Router\Exception\RouteNotFoundException;
 
 if (!defined('PACKAGE_FRONT_ROOT'))
 {
@@ -38,8 +36,6 @@ class FrontPackage extends AbstractPackage
 	public function boot()
 	{
 		parent::boot();
-
-		// Add your own boot logic
 	}
 
 	/**
@@ -55,7 +51,6 @@ class FrontPackage extends AbstractPackage
 		BootstrapScript::css();
 		BootstrapScript::script();
 		BootstrapScript::fontAwesome();
-		Asset::addCSS($this->name . '/css/front.css');
 
 		// Language
 		TranslatorHelper::loadAll($this, 'ini');
@@ -65,13 +60,10 @@ class FrontPackage extends AbstractPackage
 	 * checkAccess
 	 *
 	 * @return  void
-	 *
-	 * @throws  RouteNotFoundException
-	 * @throws  \Exception
 	 */
 	protected function checkAccess()
 	{
-		// Add your access checking
+
 	}
 
 	/**
@@ -85,7 +77,7 @@ class FrontPackage extends AbstractPackage
 	{
 		if (WINDWALKER_DEBUG)
 		{
-			if (class_exists(DebuggerHelper::class))
+			if (class_exists('Windwalker\Debugger\Helper\DebuggerHelper'))
 			{
 				DebuggerHelper::addCustomData('Language Orphans', '<pre>' . TranslatorHelper::getFormattedOrphans() . '</pre>');
 			}

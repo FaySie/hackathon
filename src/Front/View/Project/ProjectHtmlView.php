@@ -8,9 +8,6 @@
 
 namespace Front\View\Project;
 
-use Phoenix\Script\BootstrapScript;
-use Phoenix\Script\PhoenixScript;
-use Phoenix\View\EditView;
 use Phoenix\View\ItemView;
 
 /**
@@ -18,7 +15,7 @@ use Phoenix\View\ItemView;
  * 
  * @since  1.0
  */
-class ProjectHtmlView extends EditView
+class ProjectHtmlView extends ItemView
 {
 	/**
 	 * Property name.
@@ -28,39 +25,9 @@ class ProjectHtmlView extends EditView
 	protected $name = 'Project';
 
 	/**
-	 * Property formDefinition.
-	 *
-	 * @var  string
-	 */
-	protected $formDefinition = 'Edit';
-
-	/**
-	 * Property formControl.
-	 *
-	 * @var  string
-	 */
-	protected $formControl = 'item';
-
-	/**
-	 * Property formLoadData.
-	 *
-	 * @var  boolean
-	 */
-	protected $formLoadData = true;
-
-	/**
 	 * prepareData
 	 *
 	 * @param \Windwalker\Data\Data $data
-	 *
-	 * @see  ItemView
-	 * ------------------------------------------------------
-	 * @var  $data->state  \Windwalker\Registry\Registry
-	 * @var  $data->item   \Front\Record\ProjectRecord
-	 *
-	 * @see  EditView
-	 * ------------------------------------------------------
-	 * @var  $data->form   \Windwalker\Form\Form
 	 *
 	 * @return  void
 	 */
@@ -79,12 +46,6 @@ class ProjectHtmlView extends EditView
 	 */
 	protected function prepareScripts()
 	{
-		PhoenixScript::core();
-		PhoenixScript::chosen('select.hasChosen');
-		PhoenixScript::formValidation();
-		BootstrapScript::checkbox(BootstrapScript::FONTAWESOME);
-		BootstrapScript::buttonRadio();
-		BootstrapScript::tooltip();
 	}
 
 	/**

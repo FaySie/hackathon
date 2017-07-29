@@ -8,26 +8,21 @@
 
 namespace Front\Record;
 
-use Front\Record\Traits\ProjectDataTrait;
-use Front\Table\Table;
-use Windwalker\Event\Event;
 use Windwalker\Record\Record;
 
 /**
  * The ProjectRecord class.
- *
+ * 
  * @since  1.0
  */
 class ProjectRecord extends Record
 {
-	use ProjectDataTrait;
-
 	/**
 	 * Property table.
 	 *
 	 * @var  string
 	 */
-	protected $table = Table::PROJECTS;
+	protected $table = 'projects';
 
 	/**
 	 * Property keys.
@@ -35,40 +30,4 @@ class ProjectRecord extends Record
 	 * @var  string
 	 */
 	protected $keys = 'id';
-
-	/**
-	 * onAfterLoad
-	 *
-	 * @param Event $event
-	 *
-	 * @return  void
-	 */
-	public function onAfterLoad(Event $event)
-	{
-		// Add your logic
-	}
-
-	/**
-	 * onAfterStore
-	 *
-	 * @param Event $event
-	 *
-	 * @return  void
-	 */
-	public function onAfterStore(Event $event)
-	{
-		// Add your logic
-	}
-
-	/**
-	 * onAfterDelete
-	 *
-	 * @param Event $event
-	 *
-	 * @return  void
-	 */
-	public function onAfterDelete(Event $event)
-	{
-		// Add your logic
-	}
 }

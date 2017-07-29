@@ -8,12 +8,8 @@
 
 namespace Front\Helper;
 
-use Windwalker\Core\Language\Translator;
 use Windwalker\Core\View\Helper\AbstractHelper;
-use Windwalker\Dom\HtmlElement;
-use Windwalker\Filesystem\Filesystem;
 use Windwalker\Ioc;
-use Windwalker\String\StringInflector;
 use Windwalker\Utilities\ArrayHelper;
 
 /**
@@ -92,73 +88,5 @@ class MenuHelper extends AbstractHelper
 		}
 
 		return !empty(ArrayHelper::query([$input->toArray()], $query));
-	}
-
-	/**
-	 * getSubmenus
-	 *
-	 * @return  array
-	 */
-	public function getSubmenus()
-	{
-		$menus = $this->findViewMenus(static::PLURAL);
-		$view = $this->getParent()->getView();
-		$package = $view->getPackage();
-		$links = [];
-
-		foreach ($menus as $menu)
-		{
-			$active = static::active($menu, 'submenu');
-
-			$links[] = new HtmlElement(
-				'a',
-				Translator::translate($package->getName() . '.' . $menu),
-				[
-					'href' => $view->getRouter()->route($menu),
-					'class' => $active
-				]
-			);
-		}
-
-		return $links;
-	}
-
-	/**
-	 * guessSubmenus
-	 *
-	 * @param string $inflection
-	 *
-	 * @return array
-	 */
-	protected function findViewMenus($inflection = self::PLURAL)
-	{
-		$inflector = StringInflector::getInstance();
-
-		$viewFolder = PACKAGE_FRONT_ROOT . '/View';
-
-		$views = Filesystem::folders($viewFolder);
-		$menus = [];
-
-		/** @var \SplFileInfo $view */
-		foreach ($views as $view)
-		{
-			if ($view->isFile())
-			{
-				continue;
-			}
-
-			$name = strtolower($view->getBasename());
-
-			if ($inflection == static::PLURAL && $inflector->isPlural($name))
-			{
-				$menus[] = $name;
-			}
-			elseif ($inflection == static::SINGULAR && $inflector->isSingular($name))
-			{
-				$menus[] = $name;
-			}
-		}
-
-		return $menus;
 	}
 }

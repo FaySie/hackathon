@@ -1,21 +1,17 @@
 # Project
 project:
-    pattern: /project(/id)
+    pattern: /project/(id)
     controller: Project
     extra:
         layout: project
-        menu:
+        active:
             mainmenu: projects
 
 # Projects
 projects:
     pattern: /projects(/page)
     controller: Projects
-    action:
-        post: CopyController
-        patch: BatchController
-        put: FilterController
     extra:
         layout: projects
-        menu:
+        active:
             mainmenu: projects

@@ -8,7 +8,6 @@
 
 namespace Front\Model;
 
-use Front\Table\Table;
 use Phoenix\Model\Filter\FilterHelperInterface;
 use Phoenix\Model\ListModel;
 use Windwalker\Query\Query;
@@ -48,7 +47,7 @@ class ProjectsModel extends ListModel
 	 */
 	protected function configureTables()
 	{
-		$this->addTable('project', Table::PROJECTS);
+		$this->addTable('project', 'projects');
 	}
 
 	/**
@@ -95,7 +94,7 @@ class ProjectsModel extends ListModel
 	 */
 	protected function configureFilters(FilterHelperInterface $filterHelper)
 	{
-		// Configure filters
+		// Add your logic
 	}
 
 	/**
@@ -118,6 +117,6 @@ class ProjectsModel extends ListModel
 	 */
 	protected function configureSearches(FilterHelperInterface $searchHelper)
 	{
-		// Configure searches
+		// Add your logic
 	}
 }

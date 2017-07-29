@@ -10,7 +10,7 @@ namespace Front\Controller\Project;
 
 use Front\Model\ProjectModel;
 use Front\View\Project\ProjectHtmlView;
-use Phoenix\Controller\Display\EditDisplayController;
+use Phoenix\Controller\Display\ItemDisplayController;
 use Windwalker\Core\Model\ModelRepository;
 use Windwalker\Core\View\AbstractView;
 
@@ -19,7 +19,7 @@ use Windwalker\Core\View\AbstractView;
  * 
  * @since  1.0
  */
-class GetController extends EditDisplayController
+class GetController extends ItemDisplayController
 {
 	/**
 	 * The default Model.

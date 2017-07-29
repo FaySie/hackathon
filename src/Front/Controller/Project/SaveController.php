@@ -20,18 +20,25 @@ use Windwalker\Data\DataInterface;
 class SaveController extends AbstractSaveController
 {
 	/**
-	 * Keep this property so save & close can find routing.
+	 * Property name.
+	 *
+	 * @var  string
+	 */
+	protected $name = 'Project';
+
+	/**
+	 * Property itemName.
+	 *
+	 * @var  string
+	 */
+	protected $itemName = 'Project';
+
+	/**
+	 * Property listName.
 	 *
 	 * @var  string
 	 */
 	protected $listName = 'Projects';
-
-	/**
-	 * Property formControl.
-	 *
-	 * @var  string
-	 */
-	protected $formControl = 'item';
 
 	/**
 	 * The default Model.

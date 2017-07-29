@@ -9,9 +9,7 @@
 namespace Front\DataMapper;
 
 use Front\Record\ProjectRecord;
-use Front\Table\Table;
 use Windwalker\DataMapper\AbstractDatabaseMapperProxy;
-use Windwalker\Event\Event;
 
 /**
  * The ProjectMapper class.
@@ -25,7 +23,7 @@ class ProjectMapper extends AbstractDatabaseMapperProxy
 	 *
 	 * @var  string
 	 */
-	protected static $table = Table::PROJECTS;
+	protected static $table = 'projects';
 
 	/**
 	 * Property keys.
@@ -47,76 +45,4 @@ class ProjectMapper extends AbstractDatabaseMapperProxy
 	 * @var  string
 	 */
 	protected static $dataClass = ProjectRecord::class;
-
-	/**
-	 * onAfterFind
-	 *
-	 * @param Event $event
-	 *
-	 * @return  void
-	 */
-	public function onAfterFind(Event $event)
-	{
-		// Add your logic
-	}
-
-	/**
-	 * onAfterCreate
-	 *
-	 * @param Event $event
-	 *
-	 * @return  void
-	 */
-	public function onAfterCreate(Event $event)
-	{
-		// Add your logic
-	}
-
-	/**
-	 * onAfterUpdate
-	 *
-	 * @param Event $event
-	 *
-	 * @return  void
-	 */
-	public function onAfterUpdate(Event $event)
-	{
-		// Add your logic
-	}
-
-	/**
-	 * onAfterDelete
-	 *
-	 * @param Event $event
-	 *
-	 * @return  void
-	 */
-	public function onAfterDelete(Event $event)
-	{
-		// Add your logic
-	}
-
-	/**
-	 * onAfterFlush
-	 *
-	 * @param Event $event
-	 *
-	 * @return  void
-	 */
-	public function onAfterFlush(Event $event)
-	{
-		// Add your logic
-	}
-
-	/**
-	 * onAfterUpdateAll
-	 *
-	 * @param Event $event
-	 *
-	 * @return  void
-	 */
-	public function onAfterUpdateAll(Event $event)
-	{
-		// Add your logic
-	}
 }
