@@ -24,12 +24,6 @@
 @section('content')
 <div class="container task-item">
     <h1>Task Item</h1>
-    <p>
-        <a class="btn btn-default" href="{{ $router->route('tasks') }}">
-            <span class="fa fa-chervon-left"></span>
-            Back to List
-        </a>
-    </p>
     <hr />
     <img src="{{ $item->image }}" alt="Image">
     <h2>{{ $item->title }}</h2>

@@ -31,7 +31,7 @@
         <div class="home-item">
             <p>
                 <span class="fa fa-angle-right text-muted"></span>
-                <a href="{{ $router->route('home', ['id' => $item->id]) }}">
+                <a href="{{ $router->route('task', ['id' => $item->id]) }}">
                     {{ $item->title }}
                 </a>
             </p>
