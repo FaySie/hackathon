@@ -6,9 +6,11 @@
  * @license    GNU General Public License version 2 or later.
  */
 
+use Admin\DataMapper\ProjectImageMapMapper;
 use Admin\DataMapper\ProjectMapper;
 use Admin\Table\Table;
 use Faker\Factory;
+use Lyrasoft\Unidev\Helper\UnsplashHelper;
 use Lyrasoft\Warder\Admin\DataMapper\UserMapper;
 use Windwalker\Core\Seeder\AbstractSeeder;
 use Windwalker\Data\Data;
@@ -50,7 +52,18 @@ class ProjectSeeder extends AbstractSeeder
 			$data['modified_by'] = $faker->randomElement($userIds);
 			$data['params']      = '';
 
-			ProjectMapper::createOne($data);
+			$project = ProjectMapper::createOne($data);
+
+			foreach (range(1, mt_rand(10, 20)) as $j)
+			{
+				$data = new Data;
+
+				$data['project_id'] = $project->id;
+				$data['image']      = UnsplashHelper::getImageUrl();
+				$data['params']     = '';
+
+				ProjectImageMapMapper::createOne($data);
+			}
 
 			$this->outCounting();
 		}
