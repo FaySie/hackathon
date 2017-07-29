@@ -48,7 +48,8 @@ class TasksModel extends ListModel
 	 */
 	protected function configureTables()
 	{
-		$this->addTable('task', Table::TASKS);
+		$this->addTable('task', Table::TASKS)
+			->addTable('project', Table::PROJECTS, 'task.project_id = project.id');
 	}
 
 	/**

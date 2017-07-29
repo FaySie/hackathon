@@ -8,6 +8,7 @@
 
 namespace Admin\Form\Task;
 
+use Admin\Field\Project\ProjectModalField;
 use Admin\Field\Task\TaskListField;
 use Admin\Field\Task\TaskModalField;
 use Lyrasoft\Luna\Field\Editor\TinymceEditorField;
@@ -53,6 +54,10 @@ class EditDefinition extends AbstractFieldDefinition
 			// Alias
 			$this->text('alias')
 				->label(Translator::translate('admin.task.field.alias'));
+
+			// Project
+			$this->add('project_id', ProjectModalField::class)
+				->label(Translator::translate('admin.task.field.project'));
 
 			// Ideal Time
 			$this->text('ideal_time')
