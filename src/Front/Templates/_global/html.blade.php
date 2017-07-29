@@ -30,360 +30,16 @@
     {!! \Phoenix\Html\HtmlHeader::renderCustomTags() !!}
 </head>
 <body class="package-{{ $package->name }} view-{{ strtolower($view->getName()) }} layout-{{ $view->getLayout() }} fixed-header horizontal-menu">
-<!-- BEGIN SIDEBPANEL-->
-<nav class="page-sidebar" data-pages="sidebar">
-    <!-- BEGIN SIDEBAR MENU TOP TRAY CONTENT-->
-    <div class="sidebar-overlay-slide from-top" id="appMenu">
-        <div class="row">
-            <div class="col-xs-6 no-padding">
-                <a href="#" class="p-l-40"><img src="assets/img/demo/social_app.svg" alt="socail">
-                </a>
-            </div>
-            <div class="col-xs-6 no-padding">
-                <a href="#" class="p-l-10"><img src="assets/img/demo/email_app.svg" alt="socail">
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-6 m-t-20 no-padding">
-                <a href="#" class="p-l-40"><img src="assets/img/demo/calendar_app.svg" alt="socail">
-                </a>
-            </div>
-            <div class="col-xs-6 m-t-20 no-padding">
-                <a href="#" class="p-l-10"><img src="assets/img/demo/add_more.svg" alt="socail">
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- END SIDEBAR MENU TOP TRAY CONTENT-->
-    <!-- BEGIN SIDEBAR MENU HEADER-->
-    <div class="sidebar-header">
-        <img src="assets/img/logo_white.png" alt="logo" class="brand" data-src="assets/img/logo_white.png" data-src-retina="assets/img/logo_white_2x.png" width="78" height="22">
-        <div class="sidebar-header-controls">
-            <button type="button" class="btn btn-xs sidebar-slide-toggle btn-link m-l-20" data-pages-toggle="#appMenu">
-                <i class="fa fa-angle-down fs-16"></i>
-            </button>
-            <button type="button" class="btn btn-link visible-lg-inline" data-toggle-pin="sidebar">
-                <i class="fa fs-12"></i>
-            </button>
-        </div>
-    </div>
-    <!-- END SIDEBAR MENU HEADER-->
-    <!-- START SIDEBAR MENU -->
-    <div class="sidebar-menu">
-        <!-- BEGIN SIDEBAR MENU ITEMS-->
-        <ul class="menu-items">
-            <li class="m-t-30 ">
-                <a href="index.html" class="detailed">
-                    <span class="title">Dashboard</span>
-                    <span class="details">12 New Updates</span>
-                </a>
-                <span class="bg-success icon-thumbnail"><i class="pg-home"></i></span>
-            </li>
-            <li class="">
-                <a href="http://pages.revox.io/dashboard/latest/html/widget.html" class="detailed">
-                    <span class="title">Widgets</span>
-                    <span class="details">22 items</span>
-                </a>
-                <span class="icon-thumbnail">W</span>
-            </li>
-            <li class="">
-                <a href="email.html" class="detailed">
-                    <span class="title">Email</span>
-                    <span class="details">234 New Emails</span>
-                </a>
-                <span class="icon-thumbnail"><i class="pg-mail"></i></span>
-            </li>
-            <li class="">
-                <a href="social.html"><span class="title">Social</span></a>
-                <span class="icon-thumbnail"><i class="pg-social"></i></span>
-            </li>
-            <li>
-                <a href="javascript:;"><span class="title">Calendar</span>
-                    <span class=" arrow"></span></a>
-                <span class="icon-thumbnail"><i class="pg-calender"></i></span>
-                <ul class="sub-menu">
-                    <li class="">
-                        <a href="calendar.html">Basic</a>
-                        <span class="icon-thumbnail">c</span>
-                    </li>
-                    <li class="">
-                        <a href="calendar_lang.html">Languages</a>
-                        <span class="icon-thumbnail">L</span>
-                    </li>
-                    <li class="">
-                        <a href="calendar_month.html">Month</a>
-                        <span class="icon-thumbnail">M</span>
-                    </li>
-                    <li class="">
-                        <a href="calendar_lazy.html">Lazy load</a>
-                        <span class="icon-thumbnail">La</span>
-                    </li>
-                    <li class="">
-                        <a href="http://pages.revox.io/dashboard/2.1.0/doc/#calendar" target="_blank">Documentation</a>
-                        <span class="icon-thumbnail">D</span>
-                    </li>
-                </ul>
-            </li>
-            <li class="">
-                <a href="builder.html">
-                    <span class="title">Builder</span>
-                </a>
-                <span class="icon-thumbnail"><i class="pg-layouts"></i></span>
-            </li>
-            <li>
-                <a href="javascript:;"><span class="title">Layouts</span>
-                    <span class=" arrow"></span></a>
-                <span class="icon-thumbnail"><i class="pg-layouts2"></i></span>
-                <ul class="sub-menu">
-                    <li class="">
-                        <a href="default_layout.html">Default</a>
-                        <span class="icon-thumbnail">dl</span>
-                    </li>
-                    <li class="">
-                        <a href="secondary_layout.html">Secondary</a>
-                        <span class="icon-thumbnail">sl</span>
-                    </li>
-                    <li class="">
-                        <a href="boxed_layout.html">Boxed</a>
-                        <span class="icon-thumbnail">bl</span>
-                    </li>
-                    <li class="">
-                        <a href="sidemenu_and_horizontal_menu.html">Horizontal Menu</a>
-                        <span class="icon-thumbnail">hm</span>
-                    </li>
-                    <li class="">
-                        <a href="rtl_layout.html">RTL</a>
-                        <span class="icon-thumbnail">rl</span>
-                    </li>
-                    <li class="">
-                        <a href="builder.html#tabContent">Columns</a>
-                        <span class="icon-thumbnail">cl</span>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="javascript:;"><span class="title">UI Elements</span>
-                    <span class=" arrow"></span></a>
-                <span class="icon-thumbnail">Ui</span>
-                <ul class="sub-menu">
-                    <li class="">
-                        <a href="color.html">Color</a>
-                        <span class="icon-thumbnail">c</span>
-                    </li>
-                    <li class="">
-                        <a href="typography.html">Typography</a>
-                        <span class="icon-thumbnail">t</span>
-                    </li>
-                    <li class="">
-                        <a href="icons.html">Icons</a>
-                        <span class="icon-thumbnail">i</span>
-                    </li>
-                    <li class="">
-                        <a href="buttons.html">Buttons</a>
-                        <span class="icon-thumbnail">b</span>
-                    </li>
-                    <li class="">
-                        <a href="notifications.html">Notifications</a>
-                        <span class="icon-thumbnail">n</span>
-                    </li>
-                    <li class="">
-                        <a href="modals.html">Modals</a>
-                        <span class="icon-thumbnail">m</span>
-                    </li>
-                    <li class="">
-                        <a href="progress.html">Progress &amp; Activity</a>
-                        <span class="icon-thumbnail">pa</span>
-                    </li>
-                    <li class="">
-                        <a href="tabs_accordian.html">Tabs &amp; Accordions</a>
-                        <span class="icon-thumbnail">ta</span>
-                    </li>
-                    <li class="">
-                        <a href="sliders.html">Sliders</a>
-                        <span class="icon-thumbnail">s</span>
-                    </li>
-                    <li class="">
-                        <a href="tree_view.html">Tree View</a>
-                        <span class="icon-thumbnail">tv</span>
-                    </li>
-                    <li class="">
-                        <a href="nestables.html">Nestable</a>
-                        <span class="icon-thumbnail">ns</span>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <span class="title">Forms</span>
-                    <span class=" arrow"></span>
-                </a>
-                <span class="icon-thumbnail"><i class="pg-form"></i></span>
-                <ul class="sub-menu">
-                    <li class="">
-                        <a href="form_elements.html">Form Elements</a>
-                        <span class="icon-thumbnail">fe</span>
-                    </li>
-                    <li class="">
-                        <a href="form_layouts.html">Form Layouts</a>
-                        <span class="icon-thumbnail">fl</span>
-                    </li>
-                    <li class="">
-                        <a href="form_wizard.html">Form Wizard</a>
-                        <span class="icon-thumbnail">fw</span>
-                    </li>
-                </ul>
-            </li>
-            <li class="">
-                <a href="portlets.html">
-                    <span class="title">Portlets</span>
-                </a>
-                <span class="icon-thumbnail"><i class="pg-grid"></i></span>
-            </li>
-            <li class="">
-                <a href="views.html">
-                    <span class="title">Views</span>
-                </a>
-                <span class="icon-thumbnail"><i class="pg pg-ui"></i></span>
-            </li>
-            <li>
-                <a href="javascript:;"><span class="title">Tables</span>
-                    <span class=" arrow"></span></a>
-                <span class="icon-thumbnail"><i class="pg-tables"></i></span>
-                <ul class="sub-menu">
-                    <li class="">
-                        <a href="tables.html">Basic Tables</a>
-                        <span class="icon-thumbnail">bt</span>
-                    </li>
-                    <li class="">
-                        <a href="datatables.html">Data Tables</a>
-                        <span class="icon-thumbnail">dt</span>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="javascript:;"><span class="title">Maps</span>
-                    <span class=" arrow"></span></a>
-                <span class="icon-thumbnail"><i class="pg-map"></i></span>
-                <ul class="sub-menu">
-                    <li class="">
-                        <a href="google_map.html">Google Maps</a>
-                        <span class="icon-thumbnail">gm</span>
-                    </li>
-                    <li class="">
-                        <a href="vector_map.html">Vector Maps</a>
-                        <span class="icon-thumbnail">vm</span>
-                    </li>
-                </ul>
-            </li>
-            <li class="">
-                <a href="charts.html"><span class="title">Charts</span></a>
-                <span class="icon-thumbnail"><i class="pg-charts"></i></span>
-            </li>
-            <li>
-                <a href="javascript:;"><span class="title">Extra</span>
-                    <span class=" arrow"></span></a>
-                <span class="icon-thumbnail"><i class="pg-bag"></i></span>
-                <ul class="sub-menu">
-                    <li class="">
-                        <a href="invoice.html">Invoice</a>
-                        <span class="icon-thumbnail">in</span>
-                    </li>
-                    <li class="">
-                        <a href="404.html">404 Page</a>
-                        <span class="icon-thumbnail">pg</span>
-                    </li>
-                    <li class="">
-                        <a href="500.html">500 Page</a>
-                        <span class="icon-thumbnail">pg</span>
-                    </li>
-                    <li class="active">
-                        <a href="blank_template.html">Blank Page</a>
-                        <span class="icon-thumbnail">bp</span>
-                    </li>
-                    <li class="">
-                        <a href="login.html">Login</a>
-                        <span class="icon-thumbnail">l</span>
-                    </li>
-                    <li class="">
-                        <a href="register.html">Register</a>
-                        <span class="icon-thumbnail">re</span>
-                    </li>
-                    <li class="">
-                        <a href="lock_screen.html">Lockscreen</a>
-                        <span class="icon-thumbnail">ls</span>
-                    </li>
-                    <li class="">
-                        <a href="gallery.html">Gallery</a>
-                        <span class="icon-thumbnail">gl</span>
-                    </li>
-                    <li class="">
-                        <a href="timeline.html">Timeline</a>
-                        <span class="icon-thumbnail">t</span>
-                    </li>
-                </ul>
-            </li>
-            <li class="">
-                <a href="javascript:;"><span class="title">Menu Levels</span>
-                    <span class="arrow"></span></a>
-                <span class="icon-thumbnail"><i class="pg-menu_lv"></i></span>
-                <ul class="sub-menu">
-                    <li>
-                        <a href="javascript:;">Level 1</a>
-                        <span class="icon-thumbnail">L1</span>
-                    </li>
-                    <li>
-                        <a href="javascript:;"><span class="title">Level 2</span>
-                            <span class="arrow"></span></a>
-                        <span class="icon-thumbnail">L2</span>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="javascript:;">Sub Menu</a>
-                                <span class="icon-thumbnail">Sm</span>
-                            </li>
-                            <li>
-                                <a href="ujavascript:;">Sub Menu</a>
-                                <span class="icon-thumbnail">Sm</span>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class="">
-                <a href="http://pages.revox.io/dashboard/2.2.0/docs/" target="_blank"><span class="title">Docs</span></a>
-                <span class="icon-thumbnail"><i class="pg-note"></i></span>
-            </li>
-            <li class="">
-                <a href="http://changelog.pages.revox.io/" target="_blank"><span class="title">Changelog</span></a>
-                <span class="icon-thumbnail">Cl</span>
-            </li>
-        </ul>
-        <div class="clearfix"></div>
-    </div>
-    <!-- END SIDEBAR MENU -->
-</nav>
-<!-- END SIDEBAR -->
-<!-- END SIDEBPANEL-->
 <!-- START PAGE-CONTAINER -->
 <div class="page-container ">
     <!-- START HEADER -->
     <div class="header ">
         <!-- START MOBILE CONTROLS -->
         <div class="container-fluid relative">
-            <!-- LEFT SIDE -->
-            <div class="pull-left full-height visible-sm visible-xs">
-                <!-- START ACTION BAR -->
-                <div class="header-inner">
-                    <a href="#" class="btn-link toggle-sidebar visible-sm-inline-block visible-xs-inline-block padding-5" data-toggle="sidebar">
-                        <span class="icon-set menu-hambuger"></span>
-                    </a>
-                </div>
-                <!-- END ACTION BAR -->
-            </div>
             <div class="pull-center hidden-md hidden-lg">
                 <div class="header-inner">
                     <div class="brand inline">
-                        <img src="assets/img/logo.png" alt="logo" data-src="assets/img/logo.png" data-src-retina="assets/img/logo_2x.png" width="78" height="22">
+                        <img src="{{ $asset->path }}/theme/assets/img/logo.png" alt="logo" data-src="{{ $asset->path }}/theme/assets/img/logo.png" data-src-retina="{{ $asset->path }}/theme/assets/img/logo_2x.png" width="78" height="22">
                     </div>
                 </div>
             </div>
@@ -391,9 +47,6 @@
             <div class="pull-right full-height visible-sm visible-xs">
                 <!-- START ACTION BAR -->
                 <div class="header-inner">
-                    <a href="#" class="btn-link visible-xs-inline-block visible-sm-inline-block m-r-10" data-pages="horizontal-menu-toggle">
-                        <span class="pg pg-arrow_minimize"></span>
-                    </a>
                     <a href="#" class="btn-link visible-sm-inline-block visible-xs-inline-block" data-toggle="quickview" data-toggle-element="#quickview">
                         <span class="icon-set menu-hambuger-plus"></span>
                     </a>
@@ -405,7 +58,7 @@
         <div class=" pull-left sm-table hidden-xs hidden-sm">
             <div class="header-inner">
                 <div class="brand inline">
-                    <img src="assets/img/logo.png" alt="logo" data-src="assets/img/logo.png" data-src-retina="assets/img/logo_2x.png" width="78" height="22">
+                    <img src="{{ $asset->path }}/theme/assets/img/logo.png" alt="logo" data-src="{{ $asset->path }}/theme/assets/img/logo.png" data-src-retina="{{ $asset->path }}/theme/assets/img/logo_2x.png" width="78" height="22">
                 </div>
                 <!-- START NOTIFICATION LIST -->
                 <ul class="notification-list no-margin hidden-sm hidden-xs b-grey b-l b-r no-style p-l-30 p-r-20">
@@ -495,7 +148,7 @@
                                         <div class="notification-item unread clearfix">
                                             <div class="heading">
                                                 <div class="thumbnail-wrapper d24 circular b-white m-r-5 b-a b-white m-t-10 m-r-10">
-                                                    <img width="30" height="30" data-src-retina="assets/img/profiles/1x.jpg" data-src="assets/img/profiles/1.jpg" alt="" src="assets/img/profiles/1.jpg">
+                                                    <img width="30" height="30" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/1x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/1.jpg" alt="" src="{{ $asset->path }}/theme/assets/img/profiles/1.jpg">
                                                 </div>
                                                 <a href="#" class="text-complete pull-left">
                                                     <span class="bold">Revox Design Labs</span>
@@ -551,7 +204,7 @@
                 <div class="dropdown pull-right">
                     <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="thumbnail-wrapper d32 circular inline m-t-5">
-                <img src="assets/img/profiles/avatar.jpg" alt="" data-src="assets/img/profiles/avatar.jpg" data-src-retina="assets/img/profiles/avatar_small2x.jpg" width="32" height="32">
+                <img src="{{ $asset->path }}/theme/assets/img/profiles/avatar.jpg" alt="" data-src="{{ $asset->path }}/theme/assets/img/profiles/avatar.jpg" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/avatar_small2x.jpg" width="32" height="32">
             </span>
                     </button>
                     <ul class="dropdown-menu profile-dropdown" role="menu">
@@ -578,134 +231,6 @@
     <div class="page-content-wrapper ">
         <!-- START PAGE CONTENT -->
         <div class="content ">
-            <div class="bar">
-                <div class="pull-right">
-                    <a href="#" class="text-black padding-10 visible-xs-inline visible-sm-inline pull-right m-t-10 m-b-10 m-r-10 on" data-pages="horizontal-menu-toggle">
-                        <i class=" pg-close_line"></i>
-                    </a>
-                </div>
-                <div class="bar-inner">
-                    <ul>
-                        <li>
-                            <a href="javascript:;">
-                                Whats <span class="semi-bold">new </span>
-                            </a>
-                        </li>
-                        <li class="classic">
-                            <a href="javascript:;">
-                                Classic <span class="semi-bold">Menu</span> <span class="arrow"></span>
-                            </a>
-                            <ul class="classic">
-                                <li>
-                                    <a href="#">UI Elements
-                                        <span class="description">
-                      Find which UI elements suits you the
-                      most.
-                    </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Message & Notifications
-                                        <span class="description">
-                      Alerts help to gain user attention and
-                      give...
-                    </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Buttons
-                                        <span class="description">
-                      Basic buttons are traditional buttons
-                      ...tpl
-                    </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Sliders
-                                        <span class="description">
-                    Basic slider with different options use
-                    of ...
-                    </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="horizontal">
-                            <a href="javascript:;">
-                                Horizontal <span class="semi-bold">Menu</span> <span class="arrow"></span>
-                            </a>
-                            <ul class="horizontal">
-                                <li>
-                                    <a href="#">UI Elements</a>
-                                </li>
-                                <li>
-                                    <a href="#">Message & Notifications</a>
-                                </li>
-                                <li>
-                                    <a href="#">Buttons</a>
-                                </li>
-                                <li>
-                                    <a href="#">Sliders</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="mega">
-                            <a href="javascript:;">
-                                Mega <span class="semi-bold">Menu </span><span class="arrow"></span>
-                            </a>
-                            <ul class="mega">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-3 ">
-                                            <div class="sub-menu-heading bold">Features UI</div>
-                                            <img src="
-                    assets/img/demo/pages_icon.png" alt="" data-src="
-                    assets/img/demo/pages_icon.png" data-src-retina="
-                    assets/img/demo/pages_icon_2x.png" height="60" width="60">
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="sub-menu-heading bold"> UI Elements</div>
-                                            <ul class="sub-menu">
-                                                <li><a href="#"> Typography </a></li>
-                                                <li><a href="#"> Messages & Notifications </a></li>
-                                                <li><a href="#"> Notifications </a></li>
-                                                <li><a href="#">Icons</a></li>
-                                                <li><a href="#">Buttons</a></li>
-                                                <li><a href="#"> Tabs & Accordions </a></li>
-                                                <li><a href="#">Sliders</a></li>
-                                                <li class="active"><a href="#">Group list </a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="sub-menu-heading bold">Apps</div>
-                                            <ul class="sub-menu">
-                                                <li><a href="#">Social </a></li>
-                                                <li><a href="#">Email </a></li>
-                                                <li><a href="#">Calendar </a></li>
-                                            </ul>
-                                            <div class="sub-menu-heading bold"> Forms</div>
-                                            <ul class="sub-menu">
-                                                <li><a href="#">Form Elements </a></li>
-                                                <li><a href="#">Form Layouts</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="sub-menu-heading bold">Extra</div>
-                                            <ul class="sub-menu">
-                                                <li><a href="#"> Invoice </a></li>
-                                                <li><a href="#">Login </a></li>
-                                                <li><a href="#">Register </a></li>
-                                                <li><a href="#">Gallery</a></li>
-                                                <li><a href="#">Timeline</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
             <!-- START PAGE COVER -->
             <div class="container-fluid container-fixed-lg">
                 <ul class="breadcrumb">
@@ -723,6 +248,11 @@
                    ALIGNS TO THE CENTER WITHOUT STRECTHING UNGLY ON 1800PX(1080P & 4/5K MONITORS) UP WORDS SCREEN
                     -->
                 <!-- CONTENT GOES HERE-->
+
+                @messages
+
+                @yield('content', 'Content')
+
             </div>
         </div>
         <!-- END PAGE CONTENT -->
@@ -1105,7 +635,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/1x.jpg" data-src="assets/img/profiles/1.jpg" src="assets/img/profiles/1x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/1x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/1.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/1x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1125,7 +655,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/2x.jpg" data-src="assets/img/profiles/2.jpg" src="assets/img/profiles/2x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/2x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/2.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/2x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1140,7 +670,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/3x.jpg" data-src="assets/img/profiles/3.jpg" src="assets/img/profiles/3x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/3x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/3.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/3x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1160,7 +690,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/4x.jpg" data-src="assets/img/profiles/4.jpg" src="assets/img/profiles/4x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/4x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/4.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/4x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1175,7 +705,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/5x.jpg" data-src="assets/img/profiles/5.jpg" src="assets/img/profiles/5x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/5x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/5.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/5x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1195,7 +725,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/6x.jpg" data-src="assets/img/profiles/6.jpg" src="assets/img/profiles/6x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/6x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/6.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/6x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1210,7 +740,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/7x.jpg" data-src="assets/img/profiles/7.jpg" src="assets/img/profiles/7x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/7x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/7.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/7x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1230,7 +760,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/8x.jpg" data-src="assets/img/profiles/8.jpg" src="assets/img/profiles/8x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/8x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/8.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/8x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1245,7 +775,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/9x.jpg" data-src="assets/img/profiles/9.jpg" src="assets/img/profiles/9x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/9x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/9.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/9x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1260,7 +790,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/1x.jpg" data-src="assets/img/profiles/1.jpg" src="assets/img/profiles/1x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/1x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/1.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/1x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1275,7 +805,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/2x.jpg" data-src="assets/img/profiles/2.jpg" src="assets/img/profiles/2x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/2x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/2.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/2x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1290,7 +820,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/3x.jpg" data-src="assets/img/profiles/3.jpg" src="assets/img/profiles/3x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/3x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/3.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/3x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1310,7 +840,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/4x.jpg" data-src="assets/img/profiles/4.jpg" src="assets/img/profiles/4x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/4x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/4.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/4x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1330,7 +860,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/5x.jpg" data-src="assets/img/profiles/5.jpg" src="assets/img/profiles/5x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/5x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/5.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/5x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1345,7 +875,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/6x.jpg" data-src="assets/img/profiles/6.jpg" src="assets/img/profiles/6x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/6x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/6.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/6x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1365,7 +895,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/7x.jpg" data-src="assets/img/profiles/7.jpg" src="assets/img/profiles/7x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/7x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/7.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/7x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1385,7 +915,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/8x.jpg" data-src="assets/img/profiles/8.jpg" src="assets/img/profiles/8x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/8x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/8.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/8x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1405,7 +935,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/9x.jpg" data-src="assets/img/profiles/9.jpg" src="assets/img/profiles/9x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/9x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/9.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/9x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1420,7 +950,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/1x.jpg" data-src="assets/img/profiles/1.jpg" src="assets/img/profiles/1x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/1x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/1.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/1x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1435,7 +965,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/2x.jpg" data-src="assets/img/profiles/2.jpg" src="assets/img/profiles/2x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/2x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/2.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/2x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1450,7 +980,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/3x.jpg" data-src="assets/img/profiles/3.jpg" src="assets/img/profiles/3x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/3x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/3.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/3x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1470,7 +1000,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/4x.jpg" data-src="assets/img/profiles/4.jpg" src="assets/img/profiles/4x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/4x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/4.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/4x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1485,7 +1015,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/5x.jpg" data-src="assets/img/profiles/5.jpg" src="assets/img/profiles/5x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/5x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/5.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/5x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1500,7 +1030,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/6x.jpg" data-src="assets/img/profiles/6.jpg" src="assets/img/profiles/6x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/6x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/6.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/6x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1515,7 +1045,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/7x.jpg" data-src="assets/img/profiles/7.jpg" src="assets/img/profiles/7x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/7x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/7.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/7x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1530,7 +1060,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/8x.jpg" data-src="assets/img/profiles/8.jpg" src="assets/img/profiles/8x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/8x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/8.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/8x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1545,7 +1075,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/9x.jpg" data-src="assets/img/profiles/9.jpg" src="assets/img/profiles/9x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/9x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/9.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/9x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1566,7 +1096,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/1x.jpg" data-src="assets/img/profiles/1.jpg" src="assets/img/profiles/1x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/1x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/1.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/1x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1586,7 +1116,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/2x.jpg" data-src="assets/img/profiles/2.jpg" src="assets/img/profiles/2x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/2x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/2.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/2x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1606,7 +1136,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/3x.jpg" data-src="assets/img/profiles/3.jpg" src="assets/img/profiles/3x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/3x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/3.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/3x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1621,7 +1151,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/4x.jpg" data-src="assets/img/profiles/4.jpg" src="assets/img/profiles/4x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/4x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/4.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/4x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1636,7 +1166,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/5x.jpg" data-src="assets/img/profiles/5.jpg" src="assets/img/profiles/5x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/5x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/5.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/5x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1656,7 +1186,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/6x.jpg" data-src="assets/img/profiles/6.jpg" src="assets/img/profiles/6x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/6x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/6.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/6x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1671,7 +1201,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/7x.jpg" data-src="assets/img/profiles/7.jpg" src="assets/img/profiles/7x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/7x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/7.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/7x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1686,7 +1216,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/8x.jpg" data-src="assets/img/profiles/8.jpg" src="assets/img/profiles/8x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/8x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/8.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/8x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1706,7 +1236,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/9x.jpg" data-src="assets/img/profiles/9.jpg" src="assets/img/profiles/9x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/9x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/9.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/9x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1721,7 +1251,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/1x.jpg" data-src="assets/img/profiles/1.jpg" src="assets/img/profiles/1x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/1x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/1.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/1x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1736,7 +1266,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/2x.jpg" data-src="assets/img/profiles/2.jpg" src="assets/img/profiles/2x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/2x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/2.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/2x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1751,7 +1281,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/3x.jpg" data-src="assets/img/profiles/3.jpg" src="assets/img/profiles/3x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/3x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/3.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/3x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1771,7 +1301,7 @@
                                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                         <span class="col-xs-height col-middle">
                         <span class="thumbnail-wrapper d32 circular bg-success">
-                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/4x.jpg" data-src="assets/img/profiles/4.jpg" src="assets/img/profiles/4x.jpg" class="col-top">
+                            <img width="34" height="34" alt="" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/4x.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/4.jpg" src="{{ $asset->path }}/theme/assets/img/profiles/4x.jpg" class="col-top">
                         </span>
                         </span>
                                         <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -1815,7 +1345,7 @@
                         <!-- BEGIN From Them Message  !-->
                         <div class="message clearfix">
                             <div class="profile-img-wrapper m-t-5 inline">
-                                <img class="col-top" width="30" height="30" src="assets/img/profiles/avatar_small.jpg" alt="" data-src="assets/img/profiles/avatar_small.jpg" data-src-retina="assets/img/profiles/avatar_small2x.jpg">
+                                <img class="col-top" width="30" height="30" src="{{ $asset->path }}/theme/assets/img/profiles/avatar_small.jpg" alt="" data-src="{{ $asset->path }}/theme/assets/img/profiles/avatar_small.jpg" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/avatar_small2x.jpg">
                             </div>
                             <div class="chat-bubble from-them">
                                 Hey
@@ -1839,7 +1369,7 @@
                         <!-- BEGIN From Them Message  !-->
                         <div class="message clearfix">
                             <div class="profile-img-wrapper m-t-5 inline">
-                                <img class="col-top" width="30" height="30" src="assets/img/profiles/avatar_small.jpg" alt="" data-src="assets/img/profiles/avatar_small.jpg" data-src-retina="assets/img/profiles/avatar_small2x.jpg">
+                                <img class="col-top" width="30" height="30" src="{{ $asset->path }}/theme/assets/img/profiles/avatar_small.jpg" alt="" data-src="{{ $asset->path }}/theme/assets/img/profiles/avatar_small.jpg" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/avatar_small2x.jpg">
                             </div>
                             <div class="chat-bubble from-them">
                                 Yea
@@ -1877,7 +1407,7 @@
         <!-- BEGIN Overlay Header !-->
         <div class="container-fluid">
             <!-- BEGIN Overlay Logo !-->
-            <img class="overlay-brand" src="assets/img/logo.png" alt="logo" data-src="assets/img/logo.png" data-src-retina="assets/img/logo_2x.png" width="78" height="22">
+            <img class="overlay-brand" src="{{ $asset->path }}/theme/assets/img/logo.png" alt="logo" data-src="{{ $asset->path }}/theme/assets/img/logo.png" data-src-retina="{{ $asset->path }}/theme/assets/img/logo_2x.png" width="78" height="22">
             <!-- END Overlay Logo !-->
             <!-- BEGIN Overlay Close !-->
             <a href="#" class="close-icon-light overlay-close text-black fs-16">
@@ -1917,7 +1447,7 @@
                             <!-- BEGIN Search Result Item Thumbnail !-->
                             <div class="thumbnail-wrapper d48 circular bg-success text-white inline m-t-10">
                                 <div>
-                                    <img width="50" height="50" src="assets/img/profiles/avatar.jpg" data-src="assets/img/profiles/avatar.jpg" data-src-retina="assets/img/profiles/avatar2x.jpg" alt="">
+                                    <img width="50" height="50" src="{{ $asset->path }}/theme/assets/img/profiles/avatar.jpg" data-src="{{ $asset->path }}/theme/assets/img/profiles/avatar.jpg" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/avatar2x.jpg" alt="">
                                 </div>
                             </div>
                             <!-- END Search Result Item Thumbnail !-->

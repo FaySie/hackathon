@@ -53,9 +53,12 @@ class FrontPackage extends AbstractPackage
 		BootstrapScript::script();
 		BootstrapScript::fontAwesome();
 
+		Asset::addCSS('theme/assets/plugins/jquery-scrollbar/jquery.scrollbar.css');
 		Asset::addCSS('theme/pages/css/pages-icons.css');
 		Asset::addCSS('theme/pages/css/pages.css');
 
+		Asset::addJS('theme/assets/plugins/modernizr.custom.js');
+		Asset::addJS('theme/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js');
 		Asset::addJS('theme/pages/js/pages.min.js');
 		Asset::addJS('theme/assets/js/scripts.js');
 
