@@ -6,18 +6,16 @@
  * @license    GNU General Public License version 2 or later.
  */
 
-namespace Admin\Table;
+namespace Admin\Controller\Tasks;
+
+use Phoenix\Controller\Grid\AbstractFilterController;
 
 /**
- * The Table class.
+ * The FilterController class.
  * 
  * @since  1.0
  */
-abstract class Table
+class FilterController extends AbstractFilterController
 {
-	const PROJECTS = 'projects';
-
-	const TASKS = 'tasks';
-
-	// @muse-placeholder  db-table  Do not remove this.
+	//
 }

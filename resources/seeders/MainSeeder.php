@@ -25,6 +25,8 @@ class MainSeeder extends AbstractSeeder
 		$this->execute(UserSeeder::class);
 
 		$this->execute(ProjectSeeder::class);
+
+		$this->execute(TaskSeeder::class);
 	}
 
 	/**
@@ -37,5 +39,7 @@ class MainSeeder extends AbstractSeeder
 		$this->clear(UserSeeder::class);
 
 		$this->clear(ProjectSeeder::class);
+
+		$this->clear(TaskSeeder::class);
 	}
 }

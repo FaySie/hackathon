@@ -1,0 +1,21 @@
+# Task
+task:
+    pattern: /task(/id)
+    controller: Task
+    extra:
+        layout: task
+        menu:
+            mainmenu: tasks
+
+# Tasks
+tasks:
+    pattern: /tasks(/page)
+    controller: Tasks
+    action:
+        post: CopyController
+        patch: BatchController
+        put: FilterController
+    extra:
+        layout: tasks
+        menu:
+            mainmenu: tasks

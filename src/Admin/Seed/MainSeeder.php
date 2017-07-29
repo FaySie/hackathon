@@ -24,6 +24,8 @@ class MainSeeder extends AbstractSeeder
 	{
 		$this->execute(ProjectSeeder::class);
 
+		$this->execute(TaskSeeder::class);
+
 		// @muse-placeholder  seeder-execute  Do not remove this.
 	}
 
@@ -35,6 +37,8 @@ class MainSeeder extends AbstractSeeder
 	public function doClear()
 	{
 		$this->clear(ProjectSeeder::class);
+
+		$this->clear(TaskSeeder::class);
 
 		// @muse-placeholder  seeder-clear  Do not remove this.
 	}

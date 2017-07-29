@@ -30,5 +30,11 @@
         </a>
     </li>
 
+	<li class="{{ $helper->menu->active('tasks') }}">
+		<a href="{{ $router->route('tasks') }}">
+	        @translate('admin.tasks.title')
+	    </a>
+	</li>
+
     {{-- @muse-placeholder  submenu  Do not remove this line --}}
 </ul>
