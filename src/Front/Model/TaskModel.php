@@ -37,7 +37,7 @@ class TaskModel extends ItemModel
 	protected function postGetItem(DataInterface $item)
 	{
 		$item->image = TaskImageMapMapper::addTable('product_image_map', Table::PROJECT_IMAGE_MAPS, 'task_image_map.project_id = product_image_map.project_id')
-			->findOne(['task_id' => $item->id], 'ordering ASC')
+			->findOne(['task_image_map.task_id' => $item->id], 'task_image_map.ordering ASC')
 			->product_image_map_image;
 	}
 }
