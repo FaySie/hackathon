@@ -6,8 +6,8 @@
  * @license    GNU General Public License version 2 or later.
  */
 
-use Front\DataMapper\ProjectMapper;
-use Front\Table\Table;
+use Admin\DataMapper\ProjectMapper;
+use Admin\Table\Table;
 use Faker\Factory;
 use Windwalker\Core\Seeder\AbstractSeeder;
 use Windwalker\Data\Data;
