@@ -8,6 +8,8 @@
 
 namespace Front\View\Home;
 
+use Admin\DataMapper\TaskImageMapMapper;
+use Admin\Table\Table;
 use Phoenix\View\ListView;
 
 /**
@@ -34,6 +36,13 @@ class HomeHtmlView extends ListView
 	protected function prepareData($data)
 	{
 		parent::prepareData($data);
+
+		foreach ($data->items as $item)
+		{
+			$item->images = TaskImageMapMapper::addTable('product_image_map', Table::PROJECT_IMAGE_MAPS, 'task_image_map.project_id = product_image_map.project_id')
+				->find(['task_image_map.project_id' => $item->project_id], 'task_image_map.ordering ASC')
+				->image;
+		}
 
 		$this->prepareScripts();
 		$this->prepareMetadata();
