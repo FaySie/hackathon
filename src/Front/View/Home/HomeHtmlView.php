@@ -8,8 +8,7 @@
 
 namespace Front\View\Home;
 
-use Admin\DataMapper\TaskImageMapMapper;
-use Admin\Table\Table;
+use Front\Helper\TaskHelper;
 use Phoenix\View\ListView;
 
 /**
@@ -39,9 +38,7 @@ class HomeHtmlView extends ListView
 
 		foreach ($data->items as $item)
 		{
-			$item->image = TaskImageMapMapper::addTable('product_image_map', Table::PROJECT_IMAGE_MAPS, 'task_image_map.project_id = product_image_map.project_id')
-				->findOne(['task_image_map.project_id' => $item->project_id], 'task_image_map.ordering ASC')
-				->product_image_map_image;
+			$item->image = TaskHelper::getFirstImage($item->id);
 		}
 
 		$this->prepareScripts();

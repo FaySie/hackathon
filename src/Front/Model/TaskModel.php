@@ -8,8 +8,7 @@
 
 namespace Front\Model;
 
-use Admin\DataMapper\TaskImageMapMapper;
-use Admin\Table\Table;
+use Front\Helper\TaskHelper;
 use Phoenix\Model\ItemModel;
 use Windwalker\Data\DataInterface;
 
@@ -36,8 +35,6 @@ class TaskModel extends ItemModel
 	 */
 	protected function postGetItem(DataInterface $item)
 	{
-		$item->image = TaskImageMapMapper::addTable('product_image_map', Table::PROJECT_IMAGE_MAPS, 'task_image_map.project_id = product_image_map.project_id')
-			->findOne(['task_image_map.task_id' => $item->id], 'task_image_map.ordering ASC')
-			->product_image_map_image;
+		$item->image = TaskHelper::getFirstImage($item->id);
 	}
 }
