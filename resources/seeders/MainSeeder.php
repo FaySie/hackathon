@@ -22,7 +22,9 @@ class MainSeeder extends AbstractSeeder
 	 */
 	public function doExecute()
 	{
-		$this->execute(CoverSeeder::class);
+		$this->execute(UserSeeder::class);
+
+		$this->execute(ProjectSeeder::class);
 	}
 
 	/**
@@ -32,6 +34,8 @@ class MainSeeder extends AbstractSeeder
 	 */
 	public function doClear()
 	{
-		$this->clear(CoverSeeder::class);
+		$this->clear(UserSeeder::class);
+
+		$this->clear(ProjectSeeder::class);
 	}
 }
