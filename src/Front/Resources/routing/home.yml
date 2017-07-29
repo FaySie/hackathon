@@ -1,0 +1,17 @@
+# Home
+home:
+    pattern: /home/(id)
+    controller: Home
+    extra:
+        layout: home
+        active:
+            mainmenu: home
+
+# Home
+home:
+    pattern: /home(/page)
+    controller: Home
+    extra:
+        layout: home
+        active:
+            mainmenu: home
