@@ -25,14 +25,16 @@
 
 @section('content')
 
-    <div class="container-fluid m-t-100">
+    <div class="container-fluid m-t-40">
         <!-- Slider main container -->
         <div class="swiper-container">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 @foreach ($items as $i => $item)
-                    <div class="swiper-slide" style="background-image: linear-gradient(295deg, #88aaff, rgba(0, 199, 255, 0.82))"></div>
+                    <div class="swiper-slide" style="background-image: linear-gradient(295deg, #88aaff, rgba(0, 199, 255, 0.82))">
+                        Registion
+                    </div>
                 @endforeach
             </div>
 
@@ -41,7 +43,7 @@
             <div class="swiper-button-next"></div>
         </div>
     </div>
-    <div class="container home-item m-t-100">
+    <div class="container home-item m-t-40">
         <div class="home-items">
             <div class="row">
                 @foreach ($items as $i => $item)
