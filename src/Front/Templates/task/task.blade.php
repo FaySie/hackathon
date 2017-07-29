@@ -22,6 +22,10 @@
 @extends('_global.html')
 
 @section('content')
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">{{ $item->title }}</li>
+    </ol>
     <div class="container task-item">
         <div class="inner">
             <div class="task-info">
