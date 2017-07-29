@@ -11,8 +11,10 @@ use Admin\DataMapper\ProjectMapper;
 use Admin\DataMapper\TaskImageMapMapper;
 use Admin\DataMapper\TaskLinkMapMapper;
 use Admin\DataMapper\TaskMapper;
+use Admin\DataMapper\UserTaskLikeMapMapper;
 use Admin\Table\Table;
 use Faker\Factory;
+use Lyrasoft\Warder\Admin\DataMapper\UserMapper;
 use Windwalker\Core\Seeder\AbstractSeeder;
 use Windwalker\Data\Data;
 use Windwalker\Filter\OutputFilter;
@@ -34,6 +36,7 @@ class TaskSeeder extends AbstractSeeder
 		$faker = Factory::create();
 
 		$projects = ProjectMapper::findAll();
+		$userIds  = UserMapper::findAll()->id;
 
 		foreach ($projects as $project)
 		{
@@ -50,6 +53,8 @@ class TaskSeeder extends AbstractSeeder
 				$data['alias']       = OutputFilter::stringURLSafe($data['title']);
 				$data['ideal_time']  = mt_rand(60, 120);
 				$data['ideal_hits']  = mt_rand(1, 5);
+				$data['likes']       = mt_rand(10, 20);
+				$data['hits']        = mt_rand(100, 500);
 				$data['description'] = '<p>' . $faker->paragraph(5) . '</p>';
 				$data['state']       = $faker->randomElement([1, 1, 1, 1, 0, 0]);
 				$data['ordering']    = $i;
@@ -88,6 +93,19 @@ class TaskSeeder extends AbstractSeeder
 					$data['params']     = '';
 
 					TaskLinkMapMapper::createOne($data);
+				}
+
+				$likeUserIds = $faker->randomElements($userIds, $project->likes);
+
+				foreach ($likeUserIds as $likeUserId)
+				{
+					$data = new Data;
+
+					$data['user_id']    = $likeUserId;
+					$data['project_id'] = $project->id;
+					$data['params']     = '';
+
+					UserTaskLikeMapMapper::createOne($data);
 				}
 
 				$this->outCounting();

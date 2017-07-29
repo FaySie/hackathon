@@ -8,24 +8,24 @@
 
 namespace Admin\DataMapper;
 
-use Admin\Record\UserProjectLikeMapRecord;
+use Admin\Record\UserTaskLikeMapRecord;
 use Admin\Table\Table;
 use Windwalker\DataMapper\AbstractDatabaseMapperProxy;
 use Windwalker\Event\Event;
 
 /**
- * The UserProjectLikeMapMapper class.
+ * The UserTaskLikeMapMapper class.
  * 
  * @since  1.0
  */
-class UserProjectLikeMapMapper extends AbstractDatabaseMapperProxy
+class UserTaskLikeMapMapper extends AbstractDatabaseMapperProxy
 {
 	/**
 	 * Property table.
 	 *
 	 * @var  string
 	 */
-	protected static $table = Table::USER_PROJECT_LIKE_MAPS;
+	protected static $table = Table::USER_TASK_LIKE_MAPS;
 
 	/**
 	 * Property keys.
@@ -39,14 +39,14 @@ class UserProjectLikeMapMapper extends AbstractDatabaseMapperProxy
 	 *
 	 * @var  string
 	 */
-	protected static $alias = 'user_project_like_map';
+	protected static $alias = 'user_task_like_map';
 
 	/**
 	 * Property dataClass.
 	 *
 	 * @var  string
 	 */
-	protected static $dataClass = UserProjectLikeMapRecord::class;
+	protected static $dataClass = UserTaskLikeMapRecord::class;
 
 	/**
 	 * onAfterFind
