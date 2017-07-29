@@ -99,7 +99,7 @@ console:
             - php windwalker asset sync front
             - php windwalker asset sync luna
             - php windwalker asset sync unidev
-            - php windwalker asset sync teacher
+            - php windwalker asset sync warder
         preparedev:
             - echo dev > .mode
             - php windwalker run prepare
