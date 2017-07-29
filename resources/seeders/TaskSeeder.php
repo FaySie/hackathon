@@ -6,7 +6,9 @@
  * @license    GNU General Public License version 2 or later.
  */
 
+use Admin\DataMapper\ProjectImageMapMapper;
 use Admin\DataMapper\ProjectMapper;
+use Admin\DataMapper\TaskImageMapMapper;
 use Admin\DataMapper\TaskMapper;
 use Admin\Table\Table;
 use Faker\Factory;
@@ -34,11 +36,13 @@ class TaskSeeder extends AbstractSeeder
 
 		foreach ($projects as $project)
 		{
+			$projectImages = ProjectImageMapMapper::find(['project_id' => $project->id])->dump();
+
 			foreach (range(1, mt_rand(5, 10)) as $i)
 			{
 				$created = $faker->dateTimeThisYear;
 
-				$data    = new Data;
+				$data = new Data;
 
 				$data['project_id']  = $project->id;
 				$data['title']       = trim($faker->sentence(mt_rand(3, 5)), '.');
@@ -54,7 +58,21 @@ class TaskSeeder extends AbstractSeeder
 				$data['modified_by'] = $project->created_by;
 				$data['params']      = '';
 
-				TaskMapper::createOne($data);
+				$task = TaskMapper::createOne($data);
+
+				$images = $faker->randomElements($projectImages, mt_rand(5, 10));
+
+				foreach ($images as $image)
+				{
+					$data = new Data;
+
+					$data['project_id'] = $project->id;
+					$data['task_id']    = $task->id;
+					$data['image_id']   = $image->id;
+					$data['params']     = '';
+
+					TaskImageMapMapper::createOne($data);
+				}
 
 				$this->outCounting();
 			}

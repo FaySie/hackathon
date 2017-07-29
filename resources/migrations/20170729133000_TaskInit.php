@@ -42,6 +42,19 @@ class TaskInit extends AbstractMigration
 			$schema->addIndex('state');
 			$schema->addIndex('created_by');
 		});
+
+		$this->createTable(Table::TASK_IMAGE_MAPS, function(Schema $schema)
+		{
+			$schema->primary('id')->comment('Primary Key');
+			$schema->tinyint('project_id')->comment('Project ID');
+			$schema->tinyint('task_id')->comment('Task ID');
+			$schema->tinyint('image_id')->comment('Image ID');
+			$schema->text('params')->comment('Params');
+
+			$schema->addIndex('project_id');
+			$schema->addIndex('task_id');
+			$schema->addIndex('image_id');
+		});
 	}
 
 	/**
