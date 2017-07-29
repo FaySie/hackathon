@@ -10,6 +10,7 @@ namespace Front;
 
 use Phoenix\Language\TranslatorHelper;
 use Phoenix\Script\BootstrapScript;
+use Windwalker\Core\Asset\Asset;
 use Windwalker\Core\Package\AbstractPackage;
 use Windwalker\Core\Router\MainRouter;
 use Windwalker\Debugger\Helper\DebuggerHelper;
@@ -51,6 +52,12 @@ class FrontPackage extends AbstractPackage
 		BootstrapScript::css();
 		BootstrapScript::script();
 		BootstrapScript::fontAwesome();
+
+		Asset::addCSS('theme/pages/css/pages-icons.css');
+		Asset::addCSS('theme/pages/css/pages.css');
+
+		Asset::addJS('theme/pages/js/pages.min.js');
+		Asset::addJS('theme/assets/js/scripts.js');
 
 		// Language
 		TranslatorHelper::loadAll($this, 'ini');
