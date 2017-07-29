@@ -36,12 +36,6 @@
 
                 {!! $form->renderFields('basic') !!}
             </fieldset>
-
-            <fieldset id="fieldset-text" class="form-horizontal">
-                <legend>@translate('admin.task.edit.fieldset.text')</legend>
-
-                {!! $form->renderFields('text') !!}
-            </fieldset>
         </div>
         <div class="col-md-5">
             <fieldset id="fieldset-created" class="form-horizontal">
