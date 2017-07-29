@@ -103,5 +103,7 @@ class TaskSeeder extends AbstractSeeder
 	public function doClear()
 	{
 		$this->truncate(Table::TASKS);
+		$this->truncate(Table::TASK_IMAGE_MAPS);
+		$this->truncate(Table::TASK_LINK_MAPS);
 	}
 }

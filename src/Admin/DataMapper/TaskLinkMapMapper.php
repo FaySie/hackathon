@@ -39,7 +39,7 @@ class TaskLinkMapMapper extends AbstractDatabaseMapperProxy
 	 *
 	 * @var  string
 	 */
-	protected static $alias = 'task_image_map';
+	protected static $alias = 'task_link_map';
 
 	/**
 	 * Property dataClass.
