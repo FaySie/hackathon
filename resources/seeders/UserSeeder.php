@@ -38,11 +38,11 @@ class UserSeeder extends AbstractSeeder
 			$data = new Data;
 
 			$data->name        = $faker->name;
-			$data->username    = $faker->userName;
-			$data->email       = $faker->email;
+			$data->username    = $i == 1 ? 'admin' : $faker->userName;
+			$data->email       = $i == 1 ? 'webadmin@lyrasoft.net' : $faker->email;
 			$data->password    = $pass;
 			$data->avatar      = PravatarHelper::unique(600, uniqid($i));
-			$data->group       = 1;
+			$data->group       = $i == 1 ? 1 : 2;
 			$data->blocked     = 0;
 			$data->activation  = '';
 			$data->reset_token = '';

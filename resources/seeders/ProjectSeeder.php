@@ -43,9 +43,9 @@ class ProjectSeeder extends AbstractSeeder
 			$data['state']       = $faker->randomElement([1, 1, 1, 1, 0, 0]);
 			$data['ordering']    = $i;
 			$data['created']     = $created->format($this->getDateFormat());
-			$data['created_by']  = mt_rand(20, 100);
+			$data['created_by']  = 1;
 			$data['modified']    = $created->modify('+5 days')->format($this->getDateFormat());
-			$data['modified_by'] = mt_rand(20, 100);
+			$data['modified_by'] = 1;
 			$data['language']    = 'en-GB';
 			$data['params']      = '';
 
