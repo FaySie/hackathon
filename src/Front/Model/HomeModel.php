@@ -8,6 +8,7 @@
 
 namespace Front\Model;
 
+use Admin\Table\Table;
 use Phoenix\Model\Filter\FilterHelperInterface;
 use Phoenix\Model\ListModel;
 use Windwalker\Query\Query;
@@ -47,7 +48,7 @@ class HomeModel extends ListModel
 	 */
 	protected function configureTables()
 	{
-		$this->addTable('home', 'home');
+		$this->addTable('task', Table::TASKS);
 	}
 
 	/**

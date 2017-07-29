@@ -1,15 +1,6 @@
 # Home
 home:
-    pattern: /home/(id)
-    controller: Home
-    extra:
-        layout: home
-        active:
-            mainmenu: home
-
-# Home
-home:
-    pattern: /home(/page)
+    pattern: /
     controller: Home
     extra:
         layout: home

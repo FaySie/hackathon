@@ -1,9 +1,1 @@
 # Custom routing file, all default routing files please see ./Resources/routing
-
-home:
-    pattern: /
-    controller: Projects
-    extra:
-        layout: projects
-        active:
-            mainmenu: projects
