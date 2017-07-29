@@ -59,5 +59,6 @@ class ProjectInit extends AbstractMigration
 	public function down()
 	{
 		$this->drop(Table::PROJECTS);
+		$this->drop(Table::PROJECT_IMAGE_MAPS);
 	}
 }

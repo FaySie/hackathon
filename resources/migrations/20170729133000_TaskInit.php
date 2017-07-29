@@ -82,5 +82,7 @@ class TaskInit extends AbstractMigration
 	public function down()
 	{
 		$this->drop(Table::TASKS);
+		$this->drop(Table::TASK_IMAGE_MAPS);
+		$this->drop(Table::TASK_LINK_MAPS);
 	}
 }
