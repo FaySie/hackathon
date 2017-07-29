@@ -1,6 +1,6 @@
 <?php
 /**
- * Part of Front project.
+ * Part of Admin project.
  *
  * @copyright  Copyright (C) 2016 {ORGANIZATION}. All rights reserved.
  * @license    GNU General Public License version 2 or later.
@@ -9,13 +9,14 @@
 use Admin\DataMapper\ProjectMapper;
 use Admin\Table\Table;
 use Faker\Factory;
+use Lyrasoft\Warder\Admin\DataMapper\UserMapper;
 use Windwalker\Core\Seeder\AbstractSeeder;
 use Windwalker\Data\Data;
 use Windwalker\Filter\OutputFilter;
 
 /**
  * The ProjectSeeder class.
- * 
+ *
  * @since  1.0
  */
 class ProjectSeeder extends AbstractSeeder
@@ -29,24 +30,24 @@ class ProjectSeeder extends AbstractSeeder
 	{
 		$faker = Factory::create();
 
-		foreach (range(1, 150) as $i)
+		$userIds = UserMapper::findAll()->id;
+
+		foreach (range(1, 50) as $i)
 		{
 			$created = $faker->dateTimeThisYear;
+
 			$data = new Data;
 
 			$data['title']       = trim($faker->sentence(mt_rand(3, 5)), '.');
 			$data['alias']       = OutputFilter::stringURLSafe($data['title']);
-			$data['url']         = $faker->url;
-			$data['introtext']   = $faker->paragraph(5);
-			$data['fulltext']    = $faker->paragraph(5);
-			$data['image']       = $faker->imageUrl();
+			$data['type']        = $faker->randomElement(['app', 'web']);
+			$data['description'] = '<p>' . $faker->paragraph(5) . '</p>';
+			$data['is_public']   = $faker->randomElement([1, 1, 1, 1, 0, 0]);
 			$data['state']       = $faker->randomElement([1, 1, 1, 1, 0, 0]);
-			$data['ordering']    = $i;
 			$data['created']     = $created->format($this->getDateFormat());
-			$data['created_by']  = 1;
+			$data['created_by']  = $faker->randomElement($userIds);
 			$data['modified']    = $created->modify('+5 days')->format($this->getDateFormat());
-			$data['modified_by'] = 1;
-			$data['language']    = 'en-GB';
+			$data['modified_by'] = $faker->randomElement($userIds);
 			$data['params']      = '';
 
 			ProjectMapper::createOne($data);

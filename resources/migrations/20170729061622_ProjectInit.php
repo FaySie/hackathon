@@ -25,21 +25,20 @@ class ProjectInit extends AbstractMigration
 			$schema->primary('id')->comment('Primary Key');
 			$schema->varchar('title')->comment('Title');
 			$schema->varchar('alias')->comment('Alias');
-			$schema->varchar('url')->comment('URL');
-			$schema->text('introtext')->comment('Intro Text');
-			$schema->text('fulltext')->comment('Full Text');
-			$schema->varchar('image')->comment('Main Image');
+			$schema->char('type')->length(3)->comment('app or web');
+			$schema->text('description')->comment('Description');
+			$schema->tinyint('is_public')->signed(true)->comment('0: no, 1:yes');
 			$schema->tinyint('state')->signed(true)->comment('0: unpublished, 1:published');
-			$schema->integer('ordering')->comment('Ordering');
 			$schema->datetime('created')->comment('Created Date');
 			$schema->integer('created_by')->comment('Author');
 			$schema->datetime('modified')->comment('Modified Date');
 			$schema->integer('modified_by')->comment('Modified User');
-			$schema->char('language')->length(7)->comment('Language');
 			$schema->text('params')->comment('Params');
 
 			$schema->addIndex('alias');
-			$schema->addIndex('language');
+			$schema->addIndex('type');
+			$schema->addIndex('is_public');
+			$schema->addIndex('state');
 			$schema->addIndex('created_by');
 		});
 	}

@@ -1,0 +1,17 @@
+# Task
+task:
+    pattern: /task/(id)
+    controller: Task
+    extra:
+        layout: task
+        active:
+            mainmenu: tasks
+
+# Tasks
+tasks:
+    pattern: /tasks(/page)
+    controller: Tasks
+    extra:
+        layout: tasks
+        active:
+            mainmenu: tasks
