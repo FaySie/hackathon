@@ -46,9 +46,10 @@ class TaskInit extends AbstractMigration
 		$this->createTable(Table::TASK_IMAGE_MAPS, function(Schema $schema)
 		{
 			$schema->primary('id')->comment('Primary Key');
-			$schema->tinyint('project_id')->comment('Project ID');
-			$schema->tinyint('task_id')->comment('Task ID');
-			$schema->tinyint('image_id')->comment('Image ID');
+			$schema->integer('project_id')->comment('Project ID');
+			$schema->integer('task_id')->comment('Task ID');
+			$schema->integer('image_id')->comment('Image ID');
+			$schema->integer('ordering')->comment('Ordering');
 			$schema->text('params')->comment('Params');
 
 			$schema->addIndex('project_id');

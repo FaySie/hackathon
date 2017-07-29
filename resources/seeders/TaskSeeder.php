@@ -62,13 +62,14 @@ class TaskSeeder extends AbstractSeeder
 
 				$images = $faker->randomElements($projectImages, mt_rand(5, 10));
 
-				foreach ($images as $image)
+				foreach ($images as $j => $image)
 				{
 					$data = new Data;
 
 					$data['project_id'] = $project->id;
 					$data['task_id']    = $task->id;
 					$data['image_id']   = $image->id;
+					$data['ordering']   = $j;
 					$data['params']     = '';
 
 					TaskImageMapMapper::createOne($data);
