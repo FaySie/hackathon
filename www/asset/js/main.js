@@ -18,4 +18,8 @@ $(document).ready(function () {
 	$('.add-favorite').on('click',function(){
 		$(this).toggleClass('add-success')
 	})
+
+	$('.go-start-test').on('click', function(){
+		$('.task-intro').addClass('start-test')
+	})
 });
