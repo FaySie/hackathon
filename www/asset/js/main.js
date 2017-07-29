@@ -17,5 +17,23 @@ $(document).ready(function () {
 
 	$('.add-favorite').on('click',function(){
 		$(this).toggleClass('add-success')
-	})
+	});
+
+    // Task Result
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        autoplay: false,
+        arrows: true,
+        focusOnSelect: true
+    });
+
 });
