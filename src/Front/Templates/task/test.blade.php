@@ -22,12 +22,12 @@
 @extends('_global.html')
 
 @section('content')
-<div class="container task-item">
-    <h1>Task Item</h1>
-    <hr />
-    <img src="{{ $item->image }}" alt="Image">
-    <h2>{{ $item->title }}</h2>
-    <p>{{ $item->introtext }}</p>
-    <p>{{ $item->fulltext }}</p>
-</div>
+    <div class="container task-item">
+        <h1>Task Item</h1>
+        <hr />
+        <img src="{{ $item->image }}" alt="Image">
+        <h2>{{ $item->title }}</h2>
+        <p>{{ $item->introtext }}</p>
+        <p>{{ $item->fulltext }}</p>
+    </div>
 @stop

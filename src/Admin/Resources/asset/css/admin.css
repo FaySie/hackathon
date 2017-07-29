@@ -186,3 +186,6 @@ body.sidebar-hide .main-body {
   font-size: 13px;
   min-width: 100px;
 }
+.item-image {
+  margin: 20px;
+}

@@ -41,6 +41,16 @@ class ProjectInit extends AbstractMigration
 			$schema->addIndex('state');
 			$schema->addIndex('created_by');
 		});
+
+		$this->createTable(Table::PROJECT_IMAGE_MAPS, function(Schema $schema)
+		{
+			$schema->primary('id')->comment('Primary Key');
+			$schema->integer('project_id')->comment('Project ID');
+			$schema->varchar('image')->comment('Image');
+			$schema->text('params')->comment('Params');
+
+			$schema->addIndex('project_id');
+		});
 	}
 
 	/**

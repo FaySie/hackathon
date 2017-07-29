@@ -8,8 +8,11 @@
 
 namespace Admin\Form\Task;
 
+use Admin\Field\Project\ProjectModalField;
 use Admin\Field\Task\TaskListField;
 use Admin\Field\Task\TaskModalField;
+use Lyrasoft\Luna\Field\Editor\TinymceEditorField;
+use Lyrasoft\Warder\Admin\Field\User\UserModalField;
 use Phoenix\Form\PhoenixFieldTrait;
 use Windwalker\Core\Form\AbstractFieldDefinition;
 use Windwalker\Core\Language\Translator;
@@ -52,37 +55,23 @@ class EditDefinition extends AbstractFieldDefinition
 			$this->text('alias')
 				->label(Translator::translate('admin.task.field.alias'));
 
-			// Image
-			$this->text('image')
-				->label(Translator::translate('admin.task.field.image'));
+			// Project
+			$this->add('project_id', ProjectModalField::class)
+				->label(Translator::translate('admin.task.field.project'));
 
-			// URL
-			$this->text('url')
-				->label(Translator::translate('admin.task.field.url'))
-				->addValidator(Rule\UrlValidator::class)
-				->set('class', 'validate-url');
+			// Ideal Time
+			$this->text('ideal_time')
+				->label(Translator::translate('admin.task.field.ideal_time'))
+				->required(true);
 
-			// Example: Task List
-			$this->add('task_list', TaskListField::class)
-				->label('List Example')
-				->addClass('hasChosen');
+			// Ideal Hits
+			$this->text('ideal_hits')
+				->label(Translator::translate('admin.task.field.ideal_hits'))
+				->required(true);
 
-			// Example: Task Modal
-			$this->add('task_modal', TaskModalField::class)
-				->label('Modal Example');
-		});
-
-		// Text Fieldset
-		$this->fieldset('text', function(Form $form)
-		{
-			// Introtext
-			$this->textarea('introtext')
-				->label(Translator::translate('admin.task.field.introtext'))
-				->rows(10);
-
-			// Fulltext
-			$this->textarea('fulltext')
-				->label(Translator::translate('admin.task.field.fulltext'))
+			// Description
+			$this->add('description', TinymceEditorField::class)
+				->label(Translator::translate('admin.task.field.description'))
 				->rows(10);
 		});
 
@@ -97,22 +86,22 @@ class EditDefinition extends AbstractFieldDefinition
 				->option(Translator::translate('phoenix.grid.state.published'), '1')
 				->option(Translator::translate('phoenix.grid.state.unpublished'), '0');
 
+			// Author
+			$this->add('created_by', UserModalField::class)
+				->label(Translator::translate('admin.task.field.author'));
+
 			// Created
 			$this->calendar('created')
 				->label(Translator::translate('admin.task.field.created'));
 
+			// Modified User
+			$this->add('modified_by', UserModalField::class)
+				->label(Translator::translate('admin.task.field.modifiedby'))
+				->disabled();
+
 			// Modified
 			$this->calendar('modified')
 				->label(Translator::translate('admin.task.field.modified'))
-				->disabled();
-
-			// Author
-			$this->text('created_by')
-				->label(Translator::translate('admin.task.field.author'));
-
-			// Modified User
-			$this->text('modified_by')
-				->label(Translator::translate('admin.task.field.modifiedby'))
 				->disabled();
 		});
 	}

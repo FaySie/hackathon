@@ -7,11 +7,18 @@ task:
         active:
             mainmenu: tasks
 
-# Tasks
-tasks:
-    pattern: /tasks(/page)
-    controller: Tasks
+test:
+    pattern: /task/(id)/test
+    controller: Task
     extra:
-        layout: tasks
+        layout: test
+        active:
+            mainmenu: tasks
+
+result:
+    pattern: /task/(id)/result
+    controller: Task
+    extra:
+        layout: result
         active:
             mainmenu: tasks

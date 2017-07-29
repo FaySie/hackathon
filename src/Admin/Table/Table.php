@@ -17,7 +17,11 @@ abstract class Table
 {
 	const PROJECTS = 'projects';
 
+	const PROJECT_IMAGE_MAPS = 'project_image_maps';
+
 	const TASKS = 'tasks';
+
+	const TASK_IMAGE_MAPS = 'task_image_maps';
 
 	// @muse-placeholder  db-table  Do not remove this.
 }

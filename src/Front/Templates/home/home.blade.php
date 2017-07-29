@@ -24,6 +24,7 @@
 @extends('_global.html')
 
 @section('content')
+
     <div class="container-fluid m-t-100">
         <!-- Slider main container -->
         <div class="swiper-container">
@@ -41,8 +42,8 @@
         </div>
     </div>
     <div class="container home-item m-t-100">
-    <div class="home-items">
-        <div class="row">
+        <div class="home-items">
+            <div class="row">
             @foreach ($items as $i => $item)
                 <div class="col-sm-4 m-b-30">
                     <div class="add-favorite" data-id="274" data-type="lesson" data-toggle="tooltip" title="" data-original-title="**关注此课程**">
@@ -83,7 +84,7 @@
                     </a>
                 </div>
             @endforeach
+            </div>
         </div>
     </div>
-</div>
 @stop

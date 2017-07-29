@@ -66,6 +66,11 @@
                         {!! $grid->sortTitle('admin.task.field.title', 'task.title') !!}
                     </th>
 
+                    {{-- PROJECT --}}
+                    <th>
+                        {!! $grid->sortTitle('admin.task.field.project', 'project.title') !!}
+                    </th>
+
                     {{-- ORDERING --}}
                     <th width="5%" class="text-nowrap">
                         {!! $grid->sortTitle('admin.task.field.ordering', 'task.ordering') !!}
@@ -80,11 +85,6 @@
                     {{-- CREATED --}}
                     <th width="10%" class="text-nowrap">
                         {!! $grid->sortTitle('admin.task.field.created', 'task.created') !!}
-                    </th>
-
-                    {{-- LANGUAGE --}}
-                    <th width="7%" class="text-nowrap">
-                        {!! $grid->sortTitle('admin.task.field.language', 'task.language') !!}
                     </th>
 
                     {{-- ID --}}
@@ -127,6 +127,11 @@
                             </a>
                         </td>
 
+                        {{-- PROJECT --}}
+                        <td>
+                            {{ $item->project_title }}
+                        </td>
+
                         {{-- ORDERING --}}
                         <td>
                             {!! $grid->orderButton() !!}
@@ -142,11 +147,6 @@
                             <span class="hasTooltip" title="{{ $datetime::toLocalTime($item->created, 'Y-m-d H:i:s') }}">
                                 {{ $datetime::toLocalTime($item->created, 'Y-m-d') }}
                             </span>
-                        </td>
-
-                        {{-- LANGUAGE --}}
-                        <td>
-                            {{ $item->language }}
                         </td>
 
                         {{-- ID --}}

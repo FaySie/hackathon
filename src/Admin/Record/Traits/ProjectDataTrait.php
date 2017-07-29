@@ -11,21 +11,18 @@ namespace Admin\Record\Traits;
 /**
  * The ProjectDataTrait class.
  *
- * @property  integer  id
- * @property  string   title
- * @property  string   alias
- * @property  string   url
- * @property  string   intortext
- * @property  string   fulltext
- * @property  string   image
- * @property  string   state
- * @property  string   ordering
- * @property  string   created
- * @property  integer  created_by
- * @property  string   modified
- * @property  integer  modified_by
- * @property  string   language
- * @property  string   params
+ * @property  integer id
+ * @property  string  title
+ * @property  string  alias
+ * @property  string  type
+ * @property  string  description
+ * @property  integer is_public
+ * @property  integer state
+ * @property  string  created
+ * @property  integer created_by
+ * @property  string  modified
+ * @property  integer modified_by
+ * @property  string  params
  *
  * @since  1.1
  */

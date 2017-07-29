@@ -11,21 +11,20 @@ namespace Admin\Record\Traits;
 /**
  * The TaskDataTrait class.
  *
- * @property  integer  id
- * @property  string   title
- * @property  string   alias
- * @property  string   url
- * @property  string   intortext
- * @property  string   fulltext
- * @property  string   image
- * @property  string   state
- * @property  string   ordering
- * @property  string   created
- * @property  integer  created_by
- * @property  string   modified
- * @property  integer  modified_by
- * @property  string   language
- * @property  string   params
+ * @property  integer id
+ * @property  integer project_id
+ * @property  string  title
+ * @property  string  alias
+ * @property  string  ideal_time
+ * @property  string  ideal_hits
+ * @property  string  description
+ * @property  integer state
+ * @property  string  ordering
+ * @property  string  created
+ * @property  integer created_by
+ * @property  string  modified
+ * @property  integer modified_by
+ * @property  string  params
  *
  * @since  1.1
  */
