@@ -116,17 +116,11 @@
                 <!-- END BREADCRUMB -->
                 {{--<h3 class="page-title">Page Title</h3>--}}
             </div>
-            <div class="container-fluid container-fixed-lg">
-                <!-- YOU CAN REMOVE .container-fixed-lg TO DISABLE THE FEATURE WHERE THE CONTENT
-                   ALIGNS TO THE CENTER WITHOUT STRECTHING UNGLY ON 1800PX(1080P & 4/5K MONITORS) UP WORDS SCREEN
-                    -->
-                <!-- CONTENT GOES HERE-->
 
-                @messages
+            @messages
 
-                @yield('content', 'Content')
+            @yield('content', 'Content')
 
-            </div>
         </div>
         <!-- END PAGE CONTENT -->
         <!-- START COPYRIGHT -->

@@ -32,24 +32,27 @@
     </div>
 
     {{--開始任務前的介紹--}}
-    {{--<div class="task-intro">--}}
-        {{--<h3 class="text-white">--}}
-            {{--任務：成功登錄會員--}}
-        {{--</h3>--}}
-        {{--<p class="text-white">--}}
-            {{--情境：您是第一次使用本網站的訪客，想要成為會員領取折價券--}}
-        {{--</p>--}}
-        {{--<a href="#" class="btn btn-complete m-r-20">--}}
-            {{--Back--}}
-        {{--</a>--}}
-        {{--<a href="#" class="btn btn-complete">--}}
-            {{--Play--}}
-        {{--</a>--}}
-    {{--</div>--}}
+    <div class="task-intro">
+        <h3 class="text-white">
+            任務：成功登錄會員
+        </h3>
+        <p class="text-white">
+            情境：您是第一次使用本網站的訪客，想要成為會員領取折價券
+        </p>
+        <a href="#" class="btn btn-complete m-r-20">
+            Back
+        </a>
+        <a href="#" class="btn btn-complete go-start-test">
+            Play
+        </a>
+    </div>
 
     {{--開始任務--}}
-    <div class="feedback-row">
-         <span class="feedback-text-content">
+    <div class="container">
+        <div class="row">
+            <div class="feedback-row">
+                <button class="fa fa-font feedback-text"></button>
+        <span class="feedback-text-content">
             <ul>
                 <li>WTF</li>
                 <li>Suck!</li>
@@ -57,11 +60,12 @@
                 <li>Perfect</li>
             </ul>
         </span>
-        <button class="fa fa-font feedback-text"></button>
-        <button class="pg pg-like"></button>
-        <button class="fa fa-cloud"></button>
-        <button class="fa fa-comment-o"></button>
-        <button class="fa fa-frown-o"></button>
-        <button class="fa fa-magnet"></button>
+                <button class="pg pg-like"></button>
+                <button class="fa fa-cloud"></button>
+                <button class="fa fa-comment-o"></button>
+                <button class="fa fa-frown-o"></button>
+                <button class="fa fa-magnet"></button>
+            </div>
+        </div>
     </div>
 @stop
