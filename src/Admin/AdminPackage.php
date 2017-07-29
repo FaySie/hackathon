@@ -8,6 +8,7 @@
 
 namespace Admin;
 
+use Lyrasoft\Warder\Helper\UserHelper;
 use Phoenix\Language\TranslatorHelper;
 use Phoenix\Script\BootstrapScript;
 use Windwalker\Core\Asset\Asset;
@@ -72,6 +73,10 @@ class AdminPackage extends AbstractPackage
 	protected function checkAccess()
 	{
 		// Add your access checking
+		if (!UserHelper::authorise())
+		{
+			UserHelper::goToLogin($this->app->uri->full);
+		}
 	}
 
 	/**
