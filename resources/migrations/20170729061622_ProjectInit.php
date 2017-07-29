@@ -6,7 +6,7 @@
  * @license    GNU General Public License version 2 or later;
  */
 
-use Front\Table\Table;
+use Admin\Table\Table;
 use Windwalker\Core\Migration\AbstractMigration;
 use Windwalker\Database\Schema\Schema;
 
