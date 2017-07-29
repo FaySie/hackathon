@@ -1,0 +1,8 @@
+title: Hackathon
+public: /www
+parses:
+    - etc/secret.portal.yml
+scripts:
+    - php -r "copy('etc/secret.portal.yml', 'etc/secret.yml');"
+    - composer install
+    - php windwalker run preparedev

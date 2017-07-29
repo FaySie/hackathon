@@ -4,6 +4,7 @@
 !.gitkeep
 !.htaccess
 !web.config
+!.portal.yml
 
 # Composer
 /vendor
