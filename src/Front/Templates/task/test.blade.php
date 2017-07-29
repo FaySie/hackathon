@@ -51,36 +51,6 @@
     <div class="container">
         <div class="row">
             <div class="feedback-row">
-                <div class="emoji with-dropdown">
-                    <input type="checkbox" value="1" id="checkbox1">
-                    <label class="feedback-text" for="checkbox1">
-                        <i class="fa fa-font"></i>
-                    </label>
-                     <span class="feedback-text-content">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    WTF
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Suck!
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    good
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    outstanding
-                                </a>
-                            </li>
-                        </ul>
-                    </span>
-                </div>
                 <div class="emoji">
                     <input type="checkbox" value="1" id="checkbox1">
                     <label class="pg pg-like" for="checkbox1"></label>
