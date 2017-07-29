@@ -39,7 +39,7 @@ class ProjectImageMapMapper extends AbstractDatabaseMapperProxy
 	 *
 	 * @var  string
 	 */
-	protected static $alias = 'project';
+	protected static $alias = 'project_image_map';
 
 	/**
 	 * Property dataClass.
