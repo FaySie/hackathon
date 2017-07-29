@@ -9,7 +9,7 @@
 namespace Admin\Record\Traits;
 
 /**
- * The UserProjectLikeMapDataTrait class.
+ * The UserTaskLikeMapDataTrait class.
  *
  * @property  integer id
  * @property  integer user_id
@@ -18,7 +18,7 @@ namespace Admin\Record\Traits;
  *
  * @since  1.1
  */
-trait UserProjectLikeMapDataTrait
+trait UserTaskLikeMapDataTrait
 {
 
 }

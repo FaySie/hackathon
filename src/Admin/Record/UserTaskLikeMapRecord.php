@@ -8,26 +8,26 @@
 
 namespace Admin\Record;
 
-use Admin\Record\Traits\UserProjectLikeMapDataTrait;
+use Admin\Record\Traits\UserTaskLikeMapDataTrait;
 use Admin\Table\Table;
 use Windwalker\Event\Event;
 use Windwalker\Record\Record;
 
 /**
- * The UserProjectLikeMapRecord class.
+ * The UserTaskLikeMapRecord class.
  *
  * @since  1.0
  */
-class UserProjectLikeMapRecord extends Record
+class UserTaskLikeMapRecord extends Record
 {
-	use UserProjectLikeMapDataTrait;
+	use UserTaskLikeMapDataTrait;
 
 	/**
 	 * Property table.
 	 *
 	 * @var  string
 	 */
-	protected $table = Table::USER_PROJECT_LIKE_MAPS;
+	protected $table = Table::USER_TASK_LIKE_MAPS;
 
 	/**
 	 * Property keys.

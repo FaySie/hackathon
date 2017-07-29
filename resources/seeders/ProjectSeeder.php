@@ -8,7 +8,6 @@
 
 use Admin\DataMapper\ProjectImageMapMapper;
 use Admin\DataMapper\ProjectMapper;
-use Admin\DataMapper\UserProjectLikeMapMapper;
 use Admin\Table\Table;
 use Faker\Factory;
 use Lyrasoft\Unidev\Helper\UnsplashHelper;
@@ -44,8 +43,6 @@ class ProjectSeeder extends AbstractSeeder
 			$data['title']       = trim($faker->sentence(mt_rand(3, 5)), '.');
 			$data['alias']       = OutputFilter::stringURLSafe($data['title']);
 			$data['type']        = $faker->randomElement(['app', 'web']);
-			$data['likes']       = mt_rand(10, 20);
-			$data['hits']        = mt_rand(100, 500);
 			$data['description'] = '<p>' . $faker->paragraph(5) . '</p>';
 			$data['is_public']   = $faker->randomElement([1, 1, 1, 1, 0, 0]);
 			$data['state']       = $faker->randomElement([1, 1, 1, 1, 0, 0]);
@@ -66,19 +63,6 @@ class ProjectSeeder extends AbstractSeeder
 				$data['params']     = '';
 
 				ProjectImageMapMapper::createOne($data);
-			}
-
-			$likeUserIds = $faker->randomElements($userIds, $project->likes);
-
-			foreach ($likeUserIds as $likeUserId)
-			{
-				$data = new Data;
-
-				$data['user_id'] = $likeUserId;
-				$data['project_id'] = $project->id;
-				$data['params']     = '';
-
-				UserProjectLikeMapMapper::createOne($data);
 			}
 
 			$this->outCounting();
