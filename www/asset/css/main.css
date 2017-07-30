@@ -1,3 +1,24 @@
+.btn {
+  border-radius: 4px;
+  border: 2px solid #45adca;
+  height: 52px;
+  line-height: 52px;
+  min-width: 120px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+.btn-default {
+  color: #45adca;
+  background-color: transparent;
+}
+.btn-complete {
+  background-image: linear-gradient(294deg, #88aaff, rgba(0, 199, 255, 0.82)) !important;
+  opacity: .8;
+}
+.btn-complete:hover {
+  opacity: 1;
+}
 .add-favorite {
   display: inline-block;
   z-index: 100;
@@ -96,6 +117,13 @@
 .layout-test .browser-navigation {
   background-color: #fff;
   width: 100%;
+  height: 80px;
+  padding: 0 60px;
+  background-image: linear-gradient(93deg, #1c3d46, #1a2133);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+.layout-test .browser-navigation a {
+  margin-top: 14px;
 }
 .layout-test .task-intro {
   position: absolute;
@@ -118,8 +146,8 @@
   top: 0;
   position: absolute;
 }
-.layout-test .task-intro h3,
-.layout-test .task-intro p {
+.layout-test .task-intro h2,
+.layout-test .task-intro h4 {
   position: relative;
   z-index: 2;
 }
@@ -132,7 +160,7 @@
 }
 .layout-test .feedback-row {
   position: absolute;
-  bottom: 30px;
+  bottom: 45px;
   left: 30px;
 }
 .layout-test .feedback-text-content {
@@ -147,6 +175,7 @@
 }
 .layout-test .emoji {
   display: inline-block;
+  vertical-align: bottom;
 }
 .layout-test .emoji label {
   opacity: .5;
@@ -154,8 +183,11 @@
   font-size: 20px;
   margin: 5px;
 }
-.layout-test .emoji label i:hover {
+.layout-test .emoji label:hover {
   opacity: 1;
+}
+.layout-test .emoji label img {
+  height: 36px;
 }
 .layout-test .emoji input {
   display: none;
@@ -165,4 +197,12 @@
 }
 .layout-test .emoji.with-dropdown:hover .feedback-text-content {
   display: inline-block;
+}
+.layout-test .bottom-footer {
+  background-image: linear-gradient(91deg, #1c3d46, #1a2133);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 28px;
+  position: absolute;
+  bottom: 0;
 }
