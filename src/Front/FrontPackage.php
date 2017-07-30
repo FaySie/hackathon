@@ -54,6 +54,7 @@ class FrontPackage extends AbstractPackage
 		BootstrapScript::fontAwesome();
 
 		Asset::addCSS('theme/assets/plugins/jquery-scrollbar/jquery.scrollbar.css');
+		Asset::addCSS('theme/assets/plugins/switchery/css/switchery.min.css');
 		Asset::addCSS('theme/pages/css/pages-icons.css');
 		Asset::addCSS('theme/pages/css/pages.css');
 		Asset::addCSS('css/swiper.min.css');
@@ -61,6 +62,7 @@ class FrontPackage extends AbstractPackage
 
 		Asset::addJS('theme/assets/plugins/modernizr.custom.js');
 		Asset::addJS('theme/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js');
+		Asset::addJS('theme/assets/plugins/switchery/js/switchery.min.js');
 		Asset::addJS('theme/pages/js/pages.min.js');
 		Asset::addJS('js/swiper.min.js');
 		Asset::addJS('theme/assets/js/scripts.js');

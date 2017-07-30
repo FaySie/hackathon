@@ -28,6 +28,8 @@ class TaskInit extends AbstractMigration
 			$schema->varchar('alias')->comment('Alias');
 			$schema->varchar('ideal_time')->comment('Ideal Time');
 			$schema->varchar('ideal_hits')->comment('Ideal Hits');
+			$schema->integer('likes')->comment('Likes');
+			$schema->integer('hits')->comment('Hits');
 			$schema->text('description')->comment('Description');
 			$schema->tinyint('state')->signed(true)->comment('0: unpublished, 1:published');
 			$schema->integer('ordering')->comment('Ordering');
@@ -74,6 +76,17 @@ class TaskInit extends AbstractMigration
 			$schema->addIndex('task_id');
 			$schema->addIndex('image_id');
 		});
+
+		$this->createTable(Table::USER_TASK_LIKE_MAPS, function(Schema $schema)
+		{
+			$schema->primary('id')->comment('Primary Key');
+			$schema->integer('user_id')->comment('User ID');
+			$schema->integer('project_id')->comment('Project ID');
+			$schema->text('params')->comment('Params');
+
+			$schema->addIndex('user_id');
+			$schema->addIndex('project_id');
+		});
 	}
 
 	/**
@@ -84,5 +97,6 @@ class TaskInit extends AbstractMigration
 		$this->drop(Table::TASKS);
 		$this->drop(Table::TASK_IMAGE_MAPS);
 		$this->drop(Table::TASK_LINK_MAPS);
+		$this->drop(Table::USER_TASK_LIKE_MAPS);
 	}
 }

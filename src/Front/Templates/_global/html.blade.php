@@ -55,25 +55,22 @@
             </div>
         </div>
         <!-- END MOBILE CONTROLS -->
-        <div class=" pull-left sm-table hidden-xs hidden-sm">
-            <div class="header-inner">
-                <div class="brand inline">
-                    <img src="{{ $asset->path }}/theme/assets/img/logo.png" alt="logo" data-src="{{ $asset->path }}/theme/assets/img/logo.png" data-src-retina="{{ $asset->path }}/theme/assets/img/logo_2x.png" width="78" height="22">
-                </div>
-                <a href="#" class="search-link" data-toggle="search"><i class="pg-search"></i>Type anywhere to
-                    <span class="bold">search</span></a></div>
+        <div class="header-inner">
+            {{--<div class="brand inline">--}}
+            {{--Share Prototypes--}}
+            {{--</div>--}}
+            <span href="#" class="search-link"><i class="fa fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </span>
         </div>
         <div class=" pull-right">
             <div class="header-inner">
-                <a href="#" class="btn-link icon-set menu-hambuger-plus m-l-20 sm-no-margin hidden-sm hidden-xs" data-toggle="quickview" data-toggle-element="#quickview"></a>
+                <a href="#" class="btn-link pg-comment menu-hambuger-plus m-l-20 sm-no-margin hidden-sm hidden-xs" data-toggle="quickview" data-toggle-element="#quickview"></a>
             </div>
         </div>
         <div class=" pull-right">
             <!-- START User Info-->
-            <div class="visible-lg visible-md m-t-10">
-                <div class="pull-left p-r-10 p-t-10 fs-16 font-heading">
-                    <span class="semi-bold">David</span> <span class="text-master">Nest</span>
-                </div>
+            <div class="visible-lg visible-md m-t-5">
                 <div class="dropdown pull-right">
                     <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="thumbnail-wrapper d32 circular inline m-t-5">
@@ -116,17 +113,11 @@
                 <!-- END BREADCRUMB -->
                 {{--<h3 class="page-title">Page Title</h3>--}}
             </div>
-            <div class="container-fluid container-fixed-lg">
-                <!-- YOU CAN REMOVE .container-fixed-lg TO DISABLE THE FEATURE WHERE THE CONTENT
-                   ALIGNS TO THE CENTER WITHOUT STRECTHING UNGLY ON 1800PX(1080P & 4/5K MONITORS) UP WORDS SCREEN
-                    -->
-                <!-- CONTENT GOES HERE-->
 
-                @messages
+            @messages
 
-                @yield('content', 'Content')
+            @yield('content', 'Content')
 
-            </div>
         </div>
         <!-- END PAGE CONTENT -->
         <!-- START COPYRIGHT -->

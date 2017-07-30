@@ -22,12 +22,56 @@
 @extends('_global.html')
 
 @section('content')
-    <div class="container task-item">
-        <h1>Task Item</h1>
-        <hr />
-        <img src="{{ $item->image }}" alt="Image">
-        <h2>{{ $item->title }}</h2>
-        <p>{{ $item->introtext }}</p>
-        <p>{{ $item->fulltext }}</p>
+    <div class="browser-navigation">
+        <a href="#" class="btn btn-default">
+            上一頁
+        </a>
+        <a href="#" class="btn btn-danger pull-right">
+            quit
+        </a>
+    </div>
+
+    {{--開始任務前的介紹--}}
+    <div class="task-intro">
+        <h3 class="text-white">
+            任務：成功登錄會員
+        </h3>
+        <p class="text-white">
+            情境：您是第一次使用本網站的訪客，想要成為會員領取折價券
+        </p>
+        <a href="#" class="btn btn-complete m-r-20">
+            Back
+        </a>
+        <a href="#" class="btn btn-complete go-start-test">
+            Play
+        </a>
+    </div>
+
+    {{--開始任務--}}
+    <div class="container">
+        <div class="row">
+            <div class="feedback-row">
+                <div class="emoji">
+                    <input type="checkbox" value="1" id="checkbox1">
+                    <label class="pg pg-like" for="checkbox1"></label>
+                </div>
+                <div class="emoji">
+                    <input type="checkbox" value="2" id="checkbox2">
+                    <label class="fa fa-cloud" for="checkbox2"></label>
+                </div>
+                <div class="emoji">
+                    <input type="checkbox" value="3" id="checkbox3">
+                    <label class="fa fa-comment-o" for="checkbox3"></label>
+                </div>
+                <div class="emoji">
+                    <input type="checkbox" value="4" id="checkbox4">
+                    <label class="fa fa-frown-o" for="checkbox4"></label>
+                </div>
+                <div class="emoji">
+                    <input type="checkbox" value="5" id="checkbox5">
+                    <label class="fa fa-magnet" for="checkbox5"></label>
+                </div>
+            </div>
+        </div>
     </div>
 @stop
