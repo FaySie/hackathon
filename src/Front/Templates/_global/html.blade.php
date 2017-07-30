@@ -14,7 +14,7 @@
 ?><!DOCTYPE html>
 <html lang="{{ $app->get('language.locale') ? : $app->get('language.default', 'en-GB') }}">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" http-equiv="encoding">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
 
     <title>{{ \Phoenix\Html\HtmlHeader::getPageTitle() }}</title>
@@ -26,6 +26,15 @@
 
     {!! $asset->renderStyles(true) !!}
     @yield('style')
+
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="{{ $asset->root() }}/nvd3/nv.d3.min.js" charset="utf-8"></script>
+    <script src="{{ $asset->root() }}/nvd3/src/utils.js" charset="utf-8"></script>
+    <script src="{{ $asset->root() }}/nvd3/src/tooltip.js" charset="utf-8"></script>
+    <script src="{{ $asset->root() }}/nvd3/src/interactiveLayer.js" charset="utf-8"></script>
+    <script src="{{ $asset->root() }}/nvd3/src/models/axis.js" charset="utf-8"></script>
+    <script src="{{ $asset->root() }}/nvd3/src/models/line.js" charset="utf-8"></script>
+    <script src="{{ $asset->root() }}/nvd3/src/models/lineWithFocusChart.js" charset="utf-8"></script>
 
     {!! \Phoenix\Html\HtmlHeader::renderCustomTags() !!}
 </head>

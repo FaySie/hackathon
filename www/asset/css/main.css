@@ -254,3 +254,29 @@
 .layout-test .emoji.with-dropdown:hover .feedback-text-content {
   display: inline-block;
 }
+.layout-result .sidebar {
+  position: absolute;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  width: 84px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 20px 0 rgba(69, 173, 202, 0.4);
+  padding-top: 100px;
+}
+.layout-result .sidebar ul {
+  margin-top: 30px;
+  list-style: none;
+  padding-left: 0;
+}
+.layout-result .sidebar li {
+  text-align: center;
+  padding: 10px 0;
+}
+.layout-result .sidebar li.active i {
+  color: #4ad1ff;
+}
+.layout-result .sidebar li i {
+  font-size: 24px;
+  color: #9b9b9b;
+}
