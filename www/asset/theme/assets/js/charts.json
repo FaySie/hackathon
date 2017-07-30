@@ -36,7 +36,7 @@
             "area": true
         }],
         "interpolated": [{
-            "key": "6 months sales",
+            "key": "Users Emotions",
             "values": [
                 [0, 10],
                 [1, 9],
@@ -47,7 +47,7 @@
             "area": true
         }],
         "monthSales": [{
-            "key": "6 months sales",
+            "key": "Users Emotions",
             "values": [
                 [1416649976000, 0],
                 [1416736376000, 10],

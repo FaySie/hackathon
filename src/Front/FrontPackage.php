@@ -55,18 +55,23 @@ class FrontPackage extends AbstractPackage
 
 		Asset::addCSS('theme/assets/plugins/jquery-scrollbar/jquery.scrollbar.css');
 		Asset::addCSS('theme/assets/plugins/switchery/css/switchery.min.css');
+		Asset::addCSS('theme/assets/plugins/select2/css/select2.min.css');
 		Asset::addCSS('theme/pages/css/pages-icons.css');
 		Asset::addCSS('theme/pages/css/pages.css');
 		Asset::addCSS('css/swiper.min.css');
 		Asset::addCSS('nvd3/nv.d3.min.css');
 		Asset::addCSS('css/main.css');
+		Asset::addCSS('css/slick.css');
+		Asset::addCSS('css/slick-theme.css');
 
 		Asset::addJS('theme/assets/plugins/modernizr.custom.js');
 		Asset::addJS('theme/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js');
 		Asset::addJS('theme/assets/plugins/switchery/js/switchery.min.js');
+		Asset::addJS('theme/assets/plugins/select2/js/select2.full.min.js');
 		Asset::addJS('theme/pages/js/pages.min.js');
 		Asset::addJS('js/swiper.min.js');
 		Asset::addJS('theme/assets/js/scripts.js');
+		Asset::addJS('js/slick.js');
 		Asset::addJS('theme/assets/plugins/nvd3/lib/d3.v3.js');
 		Asset::addJS('js/main.js');
 
