@@ -34,6 +34,21 @@ class ProjectSeeder extends AbstractSeeder
 
 		$userIds = UserMapper::findAll()->id;
 
+		$prototypes = [
+			'prototype1.jpg',
+			'prototype2.png',
+			'prototype5.jpg',
+			'prototype8.jpg',
+			'prototype12.jpg',
+			'prototype13.jpg',
+			'prototype14.jpg',
+			'prototype15.jpg',
+			'prototype16.jpg',
+			'prototype17.jpg',
+			'prototype18.jpg',
+			'prototype19.jpg',
+		];
+
 		foreach (range(1, 50) as $i)
 		{
 			$created = $faker->dateTimeThisYear;
@@ -54,12 +69,13 @@ class ProjectSeeder extends AbstractSeeder
 
 			$project = ProjectMapper::createOne($data);
 
-			foreach (range(1, mt_rand(10, 20)) as $j)
+			foreach (range(1, mt_rand(5, 10)) as $j)
 			{
 				$data = new Data;
 
 				$data['project_id'] = $project->id;
-				$data['image']      = UnsplashHelper::getImageUrl();
+//				$data['image']      = UnsplashHelper::getImageUrl();
+				$data['image']      = 'https://lyratest.s3.amazonaws.com/hackathon/images/projects/' . $faker->randomElement($prototypes);
 				$data['params']     = '';
 
 				ProjectImageMapMapper::createOne($data);

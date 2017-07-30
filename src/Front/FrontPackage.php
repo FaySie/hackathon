@@ -58,6 +58,7 @@ class FrontPackage extends AbstractPackage
 		Asset::addCSS('theme/pages/css/pages-icons.css');
 		Asset::addCSS('theme/pages/css/pages.css');
 		Asset::addCSS('css/swiper.min.css');
+		Asset::addCSS('nvd3/nv.d3.min.css');
 		Asset::addCSS('css/main.css');
 
 		Asset::addJS('theme/assets/plugins/modernizr.custom.js');
@@ -66,6 +67,7 @@ class FrontPackage extends AbstractPackage
 		Asset::addJS('theme/pages/js/pages.min.js');
 		Asset::addJS('js/swiper.min.js');
 		Asset::addJS('theme/assets/js/scripts.js');
+		Asset::addJS('theme/assets/plugins/nvd3/lib/d3.v3.js');
 		Asset::addJS('js/main.js');
 
 		// Language
