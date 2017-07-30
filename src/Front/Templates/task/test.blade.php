@@ -14,8 +14,8 @@
  *
  * View variables
  * --------------------------------------------------------------
- * @var $item  \Front\Record\TaskRecord
- * @var $state \Windwalker\Structure\Structure
+ * @var $item     \Front\Record\TaskRecord
+ * @var $state    \Windwalker\Structure\Structure
  */
 ?>
 
@@ -26,7 +26,7 @@
         <a href="#" class="triangle-button">
             <img src="{{ $asset->root() }}/images/triangle-button.png" alt="">
         </a>
-        <a href="#" class="btn btn-default pull-right">
+        <a href="@route('result', ['id' => $item->id])" class="btn btn-default pull-right">
             Quit
         </a>
     </div>
@@ -39,16 +39,25 @@
         <h4 class="text-white m-b-50">
             情境：您是第一次使用本網站的訪客，想要成為會員領取折價券
         </h4>
-        <a href="#" class="btn btn-default m-r-80">
+        <button class="btn btn-default m-r-80" type="button" onclick="history.back();">
             Back
-        </a>
-        <a href="#" class="btn btn-complete go-start-test">
+        </button>
+        <button class="btn btn-complete go-start-test" type="button">
             Play
-        </a>
+        </button>
     </div>
 
     {{--開始任務--}}
     <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div id="test-wrapper">
+
+                    @widget('widget.test-area', ['image' => $item->image, 'link' => $item->link, 'task_id' => $item->id], 'edge')
+
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="feedback-row">
                 <div class="emoji">

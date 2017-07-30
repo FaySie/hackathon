@@ -22,3 +22,9 @@ result:
         layout: result
         active:
             mainmenu: tasks
+
+next_step:
+    pattern: /api/(task_id)/next_step
+    controller: Task
+    action:
+        '*': NextStepController

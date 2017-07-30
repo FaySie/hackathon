@@ -66,6 +66,7 @@ class TaskInit extends AbstractMigration
 			$schema->integer('project_id')->comment('Project ID');
 			$schema->integer('task_id')->comment('Task ID');
 			$schema->integer('image_id')->comment('Image ID');
+			$schema->integer('link_id')->comment('Link Image ID');
 			$schema->integer('top')->comment('Top');
 			$schema->integer('left')->comment('Left');
 			$schema->integer('width')->comment('Width');

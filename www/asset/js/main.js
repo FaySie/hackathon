@@ -16,6 +16,7 @@ $(document).ready(function ()
         prevButton: '.swiper-button-prev',
     });
 
+
     $('.add-favorite').on('click', function ()
     {
         $(this).toggleClass('add-success')
@@ -70,3 +71,26 @@ $(document).ready(function ()
         $('.send-comment-done').removeClass('hide');
     })
 });
+
+window.Test = window.Test || {
+    /**
+     * nextStep
+     *
+     * @param link_id
+     */
+    nextStep: function (link_id) {
+        $.ajax({
+            method: "POST",
+            url: Phoenix.Router.route('next_step'),
+            data: {
+                link_id: link_id
+            }
+        }).done(function (result) {
+            if (result.success)
+            {
+                $('#test-wrapper').html(result.data.html);
+            }
+        });
+    }
+};
+
