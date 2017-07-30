@@ -25,6 +25,15 @@
 }
 
 /* Global Start */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body,
+input,
+button,
+select,
+textarea {
+	font-family: 'Montserrat', sans-serif !important;
+}
+
 .add-favorite {
     display: inline-block;
     z-index: 100;
@@ -61,43 +70,6 @@
     position: relative;
 }
 
-.card-thumbnail {
-    position: relative;
-
-    .project-intro {
-        display: none;
-    }
-
-    &:hover {
-        &:before {
-            content: '';
-            display: inline-block;
-            position: absolute;
-            background-color: #000;
-            width: 100%;
-            height: 100%;
-        }
-
-        .project-intro {
-            display: inline-block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-
-            .project-title {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-            }
-        }
-    }
-
-    img {
-        width: 100%;
-    }
-}
-
 .card-info {
     position: absolute;
     bottom: 0;
@@ -118,20 +90,26 @@
 
     .project-intro {
         display: none;
+		z-index: 3;
     }
+
+	&:before {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		background-image: linear-gradient(130deg, #1c3d46, #1a2133);
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		transition: all .3s;
+		z-index :2;
+	}
 
     &:hover {
         &:before {
-            content: '';
-            display: inline-block;
-            position: absolute;
-            background-image: linear-gradient(130deg, #1c3d46, #1a2133);
-            width: 100%;
-            height: 100%;
-            padding: 20px;
-            left: 0;
-            top: 0;
-            opacity: .9;
+			opacity: .9;
         }
 
         .project-intro {
@@ -149,6 +127,7 @@
                 bottom: 20px;
                 right: 20px;
                 color: #45adca;
+				text-align: right;
             }
         }
     }
@@ -181,6 +160,12 @@
 .card-content {
     position: relative;
     color: #3b4752;
+
+	h4 {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
 }
 
 .swiper-container {
@@ -198,6 +183,11 @@
     padding-top: 15px;
     color: white;
     font-size: 16px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding-left :5px;
+	padding-right :5px;
 }
 
 .swiper-wrapper {
@@ -280,10 +270,12 @@
     background-image: linear-gradient(93deg, #1c3d46, #1a2133);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
     height: 80px;
+	padding-right: 30px;
 
     & > .header-inner {
         display: inline-block;
-        width: 78%;
+		width: 90%;
+		height: auto;
     }
 
     & > .pull-right {
@@ -296,7 +288,50 @@
             }
         }
     }
+
+	.brand {
+		width: auto;
+		padding: 0 15px;
+		padding-left: 0;
+		margin-bottom: 8px;
+	}
 }
+
+.search-link {
+	border-radius: 4px;
+	border: 1px solid #4ad1ff;
+	margin: 15px 0 15px 60px;
+	padding: 0 20px;
+	width: 86%;
+
+	input {
+		border: none;
+		line-height: 22px;
+		padding: 14px 0;
+		width: 90%;
+		background-color: transparent;
+		font-size: 16px;
+
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			color: #4ad1ff;
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+			color: #4ad1ff;
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+			color: #4ad1ff;
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+			color: #4ad1ff;
+		}
+	}
+
+	i {
+		color: #4ad1ff;
+		font-size: 22px;
+	}
+}
+
 
 .layout-home {
     .thumbnail-wrapper img {
@@ -308,41 +343,6 @@
         display: inline-block;
         margin-top: 5px;
         margin-left: 10px;
-    }
-
-    .search-link {
-        border-radius: 4px;
-        border: 1px solid #4ad1ff;
-        margin: 15px 0 15px 60px;
-        padding: 0 20px;
-        width: 100%;
-
-        input {
-            border: none;
-            line-height: 22px;
-            padding: 14px 0;
-            width: 90%;
-            background-color: transparent;
-            font-size: 16px;
-
-            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-                color: #4ad1ff;
-            }
-            &::-moz-placeholder { /* Firefox 19+ */
-                color: #4ad1ff;
-            }
-            &:-ms-input-placeholder { /* IE 10+ */
-                color: #4ad1ff;
-            }
-            &:-moz-placeholder { /* Firefox 18- */
-                color: #4ad1ff;
-            }
-        }
-
-        i {
-            color: #4ad1ff;
-            font-size: 22px;
-        }
     }
 }
 
