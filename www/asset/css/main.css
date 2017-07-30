@@ -336,3 +336,105 @@
 .layout-test .emoji.with-dropdown:hover .feedback-text-content {
   display: inline-block;
 }
+.layout-result .sidebar {
+  position: absolute;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  width: 84px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 20px 0 rgba(69, 173, 202, 0.4);
+  padding-top: 100px;
+}
+.layout-result .sidebar ul {
+  margin-top: 30px;
+  list-style: none;
+  padding-left: 0;
+}
+.layout-result .sidebar li {
+  text-align: center;
+  padding: 10px 0;
+}
+.layout-result .sidebar li.active i {
+  color: #4ad1ff;
+}
+.layout-result .sidebar li i {
+  font-size: 24px;
+  color: #9b9b9b;
+}
+.layout-result .page-container .page-content-wrapper .content {
+  padding-top: 0;
+}
+.layout-result .browser-navigation {
+  background-color: #fff;
+  width: 100%;
+}
+.layout-result .task-intro {
+  position: absolute;
+  text-align: center;
+  padding: 15% 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: all .3s;
+  z-index: 2;
+}
+.layout-result .task-intro:before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+.layout-result .task-intro h3,
+.layout-result .task-intro p {
+  position: relative;
+  z-index: 2;
+}
+.layout-result .task-intro.start-test {
+  opacity: 0;
+  z-index: -1;
+}
+.layout-result .task-intro.start-test:before {
+  content: none;
+}
+.layout-result .feedback-row {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+.layout-result .feedback-text-content {
+  display: none;
+  bottom: 30px;
+  left: 0;
+  position: absolute;
+}
+.layout-result .feedback-text-content ul {
+  padding-left: 0;
+  list-style: none;
+}
+.layout-result .emoji {
+  display: inline-block;
+}
+.layout-result .emoji label {
+  opacity: .5;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 5px;
+}
+.layout-result .emoji label i:hover {
+  opacity: 1;
+}
+.layout-result .emoji input {
+  display: none;
+}
+.layout-result .emoji input:checked + label {
+  opacity: 1;
+}
+.layout-result .emoji.with-dropdown:hover .feedback-text-content {
+  display: inline-block;
+}
