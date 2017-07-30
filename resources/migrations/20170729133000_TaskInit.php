@@ -30,6 +30,7 @@ class TaskInit extends AbstractMigration
 			$schema->varchar('ideal_hits')->comment('Ideal Hits');
 			$schema->integer('likes')->comment('Likes');
 			$schema->integer('hits')->comment('Hits');
+			$schema->integer('awesome')->comment('Awesome');
 			$schema->text('description')->comment('Description');
 			$schema->tinyint('state')->signed(true)->comment('0: unpublished, 1:published');
 			$schema->integer('ordering')->comment('Ordering');
