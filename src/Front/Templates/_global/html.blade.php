@@ -65,9 +65,9 @@
         </div>
         <!-- END MOBILE CONTROLS -->
         <div class="header-inner">
-            {{--<div class="brand inline">--}}
-            {{--Share Prototypes--}}
-            {{--</div>--}}
+            <div class="brand inline">
+                <img src="{{ $asset->root() }}/images/logo.png" height="25px" alt="">
+            </div>
             <span href="#" class="search-link"><i class="fa fa-search"></i>
                     <input type="text" placeholder="Search...">
                 </span>
