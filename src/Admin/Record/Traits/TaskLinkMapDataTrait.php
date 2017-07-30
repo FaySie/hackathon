@@ -15,6 +15,7 @@ namespace Admin\Record\Traits;
  * @property  integer project_id
  * @property  integer task_id
  * @property  integer image_id
+ * @property  integer link_id
  * @property  integer top
  * @property  integer left
  * @property  integer width

@@ -79,7 +79,7 @@ class TaskSeeder extends AbstractSeeder
 
 				$task = TaskMapper::createOne($data);
 
-				$images = $faker->randomElements($projectImages, mt_rand(2, count($projectImages)));
+				$images = $faker->randomElements($projectImages, mt_rand(3, count($projectImages)));
 
 				foreach ($images as $j => $image)
 				{
@@ -98,6 +98,7 @@ class TaskSeeder extends AbstractSeeder
 					$data['project_id'] = $project->id;
 					$data['task_id']    = $task->id;
 					$data['image_id']   = $taskImage->id;
+					$data['link_id']    = $j < count($images) - 1 ? $faker->randomElement($images)->id : '';
 					$data['top']        = 250;
 					$data['left']       = 350;
 					$data['width']      = 100;
