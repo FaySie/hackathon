@@ -167,6 +167,9 @@
   background-clip: content-box;
 }
 /* Comment Card */
+.sub-comments {
+  margin-left: 66px;
+}
 .comment-card {
   margin-top: 50px;
   border: solid 1px #ddd;
@@ -194,15 +197,19 @@
   }
 }
 .comment-card.history .card-inner .personal-info .name {
-  margin: 0;
   float: left;
+}
+.comment-card.history .card-inner .personal-info .ago {
+  margin-left: 40px;
+  float: left;
+  padding-top: 8px;
 }
 .comment-card.history .card-inner .personal-info .add-favorite {
   position: inherit;
   top: inherit;
   right: inherit;
   float: left;
-  margin: -3px 0 0 10px;
+  margin: 6px 0 0 10px;
 }
 .comment-card.history .card-inner .personal-info .stars {
   float: right;
@@ -215,7 +222,7 @@
   }
 }
 .comment-card.history .card-inner .content {
-  padding-left: 52px;
+  padding: 10px 0 20px 63px;
   text-align: left;
   display: block;
   font-size: 16px;
@@ -269,7 +276,7 @@
 }
 .comment-card .card-inner .comments {
   margin-left: 66px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 .comment-card .card-inner .comments textarea {
   min-height: 100px;

@@ -62,4 +62,11 @@ $(document).ready(function ()
             $('.layout-result .user .active').html($(this).html());
         });
     });
+    
+    /* Active all user comment */
+    $('.task-footer button').click(function ()
+    {
+        $('.before-send-comment').addClass('hide');
+        $('.send-comment-done').removeClass('hide');
+    })
 });
