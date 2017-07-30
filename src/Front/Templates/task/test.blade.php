@@ -23,23 +23,23 @@
 
 @section('content')
     <div class="browser-navigation">
-        <a href="#" class="btn btn-default">
-            上一頁
+        <a href="#" class="triangle-button">
+            <img src="{{ $asset->root() }}/images/triangle-button.png" alt="">
         </a>
-        <a href="#" class="btn btn-danger pull-right">
-            quit
+        <a href="#" class="btn btn-default pull-right">
+            Quit
         </a>
     </div>
 
     {{--開始任務前的介紹--}}
     <div class="task-intro">
-        <h3 class="text-white">
+        <h2 class="bold text-white">
             任務：成功登錄會員
-        </h3>
-        <p class="text-white">
+        </h2>
+        <h4 class="text-white m-b-50">
             情境：您是第一次使用本網站的訪客，想要成為會員領取折價券
-        </p>
-        <a href="#" class="btn btn-complete m-r-20">
+        </h4>
+        <a href="#" class="btn btn-default m-r-80">
             Back
         </a>
         <a href="#" class="btn btn-complete go-start-test">
@@ -53,25 +53,36 @@
             <div class="feedback-row">
                 <div class="emoji">
                     <input type="checkbox" value="1" id="checkbox1">
-                    <label class="pg pg-like" for="checkbox1"></label>
+                    <label for="checkbox1">
+                        <img src="{{ $asset->root() }}/images/01happy.png" alt="">
+                    </label>
                 </div>
                 <div class="emoji">
                     <input type="checkbox" value="2" id="checkbox2">
-                    <label class="fa fa-cloud" for="checkbox2"></label>
+                    <label for="checkbox2">
+                        <img src="{{ $asset->root() }}/images/02sad.png" alt="">
+                    </label>
                 </div>
                 <div class="emoji">
                     <input type="checkbox" value="3" id="checkbox3">
-                    <label class="fa fa-comment-o" for="checkbox3"></label>
+                    <label class="" for="checkbox3">
+                        <img src="{{ $asset->root() }}/images/03angry.png" alt="">
+                    </label>
                 </div>
                 <div class="emoji">
                     <input type="checkbox" value="4" id="checkbox4">
-                    <label class="fa fa-frown-o" for="checkbox4"></label>
+                    <label class="" for="checkbox4">
+                        <img src="{{ $asset->root() }}/images/04excited.png" alt="">
+                    </label>
                 </div>
                 <div class="emoji">
                     <input type="checkbox" value="5" id="checkbox5">
-                    <label class="fa fa-magnet" for="checkbox5"></label>
+                    <label class="" for="checkbox5">
+                        <img src="{{ $asset->root() }}/images/05question.png" style="height: 53px; vertical-align: bottom" alt="">
+                    </label>
                 </div>
             </div>
         </div>
     </div>
+    <div class="bottom-footer"></div>
 @stop
