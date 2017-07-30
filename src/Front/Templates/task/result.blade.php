@@ -31,8 +31,31 @@
         <div class="controls">
             <div class="users control">
                 <div class="user">
-                    Yin Chin
-                    <i class="fa fa-users round"></i>
+                    <div class="active">
+                        Yin Chin
+                        <i class="fa fa-users round"></i>
+                    </div>
+                    <div class="user-list hide">
+                        <ul>
+                            <li>
+                                All Users
+                                <i class="fa fa-users round"></i>
+                            </li>
+                            <li>
+                                Yin Chin1
+                                <i class="fa fa-user round"></i>
+                            </li>
+                            <li>
+                                Yin Chin2
+                                <i class="fa fa-user round"></i>
+                            </li>
+                            <li>
+                                Yin Chin3
+                                <i class="fa fa-user round"></i>
+                            </li>
+
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="messages control">
@@ -77,29 +100,22 @@
                 </div>
             </div>
         </div>
-
-        {{-- 用戶評論 開始 --}}
-        <div class="row">
-            <div class="col-sm-10 col-sm-offset-1">
-                <div class="comment-area">
-                    <h4>
-                        Commen
-                    </h4>
-                    <small>Please leave your comment, thanks!</small>
-                    {{-- 用戶可評論 開始 --}}
-                    <div class="comment-card">
-                        <div class="card-inner">
-                            <form class="comments">
-                                <textarea class="form-control" id="name" placeholder="Text Area" aria-invalid="false"></textarea>
-                            </form>
-                        </div>
-                    </div>
-                    {{-- 用戶可評論 結束 --}}
-                    <div class="task-footer">
-                        <div>To see data!</div>
-                        <button class="btn btn-default btn-lg">Send</button>
-                    </div>
+        {{-- 用戶可評論 開始 --}}
+        <div class="comment-card comment">
+            <div class="card-inner">
+                <div class="personal-info">
+                    <img class="avatar" src="{{ $asset->path }}/theme/assets/img/profiles/avatar_small.jpg" alt="" data-src="{{ $asset->path }}/theme/assets/img/profiles/avatar_small.jpg" data-src-retina="{{ $asset->path }}/theme/assets/img/profiles/avatar_small2x.jpg">
+                    <span class="name">陈小明</span>
                 </div>
+                <form class="comments">
+                    <textarea class="form-control" id="name" placeholder="Please leave your commen,thanks!" aria-invalid="false"></textarea>
+                </form>
             </div>
         </div>
+        <div class="task-footer">
+            <div class="info">To see data!</div>
+            <button>Send</button>
+        </div>
+    </div>
+    </div>
 @stop

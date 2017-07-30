@@ -202,16 +202,18 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                max-width: 42px;
+                width: 46px;
                 padding: 1px;
                 border-radius: 100%;
+                border: solid 1px #7badff;
             }
 
             .name {
                 font-size: 14px;
                 display: block;
                 text-align: left;
-                margin-bottom: 20px;
+                margin: 0px 0 0 10px;
+                padding-top: 8px;
 
                 @media (max-width: 767px) {
                     margin-bottom: 30px;
@@ -238,9 +240,11 @@
         }
 
         .comments {
+            margin-left: 66px;
+            margin-bottom: 50px;
 
             textarea {
-                min-height: 75px;
+                min-height: 100px;
             }
 
             .submit {
@@ -447,6 +451,8 @@
 
     &.layout-result {
         .task-item {
+            margin-bottom: 100px;
+
             .controls {
                 text-align: right;
 
@@ -455,6 +461,8 @@
                     margin-right: 10px;
 
                     &.users {
+                        position: relative;
+
                         .round {
                             border: solid 1px #ddd;
                             padding: 5px;
@@ -462,27 +470,23 @@
                             font-size: 20px;
                         }
 
-                        .select2-container {
-                            .select2-selection {
-                                &.select2-selection--single {
-                                    width: 150px;
-                                    font-family: fontawesome;
-                                    border: none !important;
-                                }
-                            }
-                        }
+                        .user-list {
+                            position: absolute;
+                            top: 100%;
+                            background: #fff;
+                            z-index: 999;
+                            width: 130px;
+                            padding: 10px;
+                            text-align: center;
 
-                        .select2-container--default {
-                            .select2-selection--single {
-                                .select2-selection__arrow {
-                                    b {
-                                        display: none;
-                                    }
-                                }
-                            }
+                            ul {
+                                list-style-type: none;
+                                padding: 0;
+                                margin: 0;
 
-                            .select2-results__optins[aria-selected="true"] {
-                                font-family: FontAwesome;
+                                li {
+                                    margin-bottom: 10px;
+                                }
                             }
                         }
                     }
@@ -491,17 +495,30 @@
 
             .records {
                 margin: 20px 0 100px 0;
-                padding: 80px 0 0 0;
-                background: #ddd;
-                border: solid 1px #ddd;
 
                 .inner {
-                    padding: 80px;
-                    background: #fff;
+
+                    .slider-for {
+                        .aniimated-item {
+                            box-shadow: 0 4px 10px 0 #3b75ff;
+                            border-style: solid;
+                            border-width: 1px;
+                            border-image-source: linear-gradient(300deg, #88aaff, #00c8ff);
+                            border-image-slice: 1;
+                        }
+                    }
 
                     .slider-nav {
                         .slick-slide {
                             height: auto;
+
+                            img {
+                                box-shadow: 0 2px 10px 0 #3b75ff;
+                                border-style: solid;
+                                border-width: 1px;
+                                border-image-source: linear-gradient(307deg, #88aaff, #00c8ff);
+                                border-image-slice: 1;
+                            }
                         }
 
                         .slick-list {
@@ -510,32 +527,73 @@
 
                         .slick-prev {
                             &:before {
+                                color: #3b75ff;
                                 content: "\e628";
                                 font: normal normal normal 20px/1 pages-icon;
+                                padding: 5px;
+                                border: solid 1px #3b75ff;
+                                border-radius: 100%;
                             }
                         }
 
                         .slick-next {
                             &:before {
+                                color: #3b75ff;
                                 content: "\e62a";
                                 font: normal normal normal 20px/1 pages-icon;
+                                padding: 5px;
+                                border: solid 1px #3b75ff;
+                                border-radius: 100%;
                             }
                         }
                     }
                 }
             }
 
-            .comment-area {
-                border: solid 1px #ddd;
+            .comment-card {
                 padding: 20px;
+                border-radius: 2px;
+                background-color: #ffffff;
+                border-style: solid;
+                border-width: 1px;
+                border-image-source: linear-gradient(285deg, #88aaff, #00c8ff);
+                border-image-slice: 1;
+                box-shadow: 0 2px 10px 0 #3b75ff;
 
-                textarea {
-                    height: 200px;
+                .comments {
+
+                    textarea {
+                        height: 100px;
+                        border-radius: 2px;
+                        border-style: solid;
+                        border-width: 1px;
+                        border-image-source: linear-gradient(277deg, #88aaff, #00c8ff);
+                        border-image-slice: 1;
+                    }
+                }
+            }
+
+            .task-footer {
+                text-align: center;
+                margin-top: 50px;
+
+                .info {
+                    font-size: 14px;
+                    color: #4a4a4a;
+                    margin-bottom: 10px;
                 }
 
-                .task-footer {
-                    text-align: center;
-                    margin-top: 50px;
+                button {
+                    width: 120px;
+                    height: 53px;
+                    color: #fff;
+                    border: none;
+                    font-size: 16px;
+                    letter-spacing: 1.8px;
+                    opacity: 0.8;
+                    box-shadow: none;
+                    border-radius: 4px;
+                    background-image: linear-gradient(294deg, #88aaff, rgba(0, 199, 255, 0.82));
                 }
             }
         }
