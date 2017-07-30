@@ -275,7 +275,7 @@
         </div>
 
         <script>
-            d3.json('http://revox.io/json/charts.json', function (data)
+            d3.json('{{ $asset->path . '/theme/assets/js/charts.json' }}', function (data)
             {
                 (function ()
                 {
