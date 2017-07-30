@@ -46,7 +46,7 @@ class GetController extends ListDisplayController
 	 *
 	 * @var  string
 	 */
-	protected $defaultOrdering = 'home.id';
+	protected $defaultOrdering = 'task.created';
 
 	/**
 	 * Property direction.
