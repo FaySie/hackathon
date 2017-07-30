@@ -38,23 +38,36 @@ class TaskSeeder extends AbstractSeeder
 		$projects = ProjectMapper::findAll();
 		$userIds  = UserMapper::findAll()->id;
 
+		$titles = [
+			'Register for learning',
+			'Join us',
+			'Start your own blog',
+			'Join us and find a new trip',
+			'Start your business',
+			'Join us for free ticket',
+			'Create your own web with us',
+			'Register - Start your journey',
+			'Become a teacher!'
+		];
+
 		foreach ($projects as $project)
 		{
 			$projectImages = ProjectImageMapMapper::find(['project_id' => $project->id])->dump();
 
-			foreach (range(1, mt_rand(5, 10)) as $i)
+			foreach (range(1, mt_rand(3, 7)) as $i)
 			{
 				$created = $faker->dateTimeThisYear;
 
 				$data = new Data;
 
 				$data['project_id']  = $project->id;
-				$data['title']       = trim($faker->sentence(mt_rand(3, 5)), '.');
+				$data['title']       = $faker->randomElement($titles);
 				$data['alias']       = OutputFilter::stringURLSafe($data['title']);
 				$data['ideal_time']  = mt_rand(60, 120);
 				$data['ideal_hits']  = mt_rand(1, 5);
 				$data['likes']       = mt_rand(10, 20);
 				$data['hits']        = mt_rand(100, 500);
+				$data['awesome']     = mt_rand(10, 20);
 				$data['description'] = '<p>' . $faker->paragraph(5) . '</p>';
 				$data['state']       = $faker->randomElement([1, 1, 1, 1, 0, 0]);
 				$data['ordering']    = $i;
@@ -66,7 +79,7 @@ class TaskSeeder extends AbstractSeeder
 
 				$task = TaskMapper::createOne($data);
 
-				$images = $faker->randomElements($projectImages, mt_rand(5, 10));
+				$images = $faker->randomElements($projectImages, mt_rand(2, count($projectImages)));
 
 				foreach ($images as $j => $image)
 				{
