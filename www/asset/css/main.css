@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 .btn {
   border-radius: 4px;
   border: 2px solid #45adca;
@@ -20,8 +21,11 @@
   opacity: 1;
 }
 /* Global Start */
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-body {
+body,
+input,
+button,
+select,
+textarea {
   font-family: 'Montserrat', sans-serif !important;
 }
 .add-favorite {
@@ -150,6 +154,11 @@ body {
   padding-top: 15px;
   color: white;
   font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .swiper-wrapper {
   overflow: hidden;

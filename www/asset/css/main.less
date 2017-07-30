@@ -26,7 +26,11 @@
 
 /* Global Start */
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
-body {
+body,
+input,
+button,
+select,
+textarea {
 	font-family: 'Montserrat', sans-serif !important;
 }
 
@@ -179,6 +183,11 @@ body {
     padding-top: 15px;
     color: white;
     font-size: 16px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding-left :5px;
+	padding-right :5px;
 }
 
 .swiper-wrapper {
