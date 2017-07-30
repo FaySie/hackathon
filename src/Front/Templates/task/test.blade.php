@@ -23,11 +23,11 @@
 
 @section('content')
     <div class="browser-navigation">
-        <a href="#" class="btn btn-default">
-            Back
+        <a href="#" class="triangle-button">
+            <img src="{{ $asset->root() }}/images/triangle-button.png" alt="">
         </a>
         <a href="#" class="btn btn-default pull-right">
-            quit
+            Quit
         </a>
     </div>
 

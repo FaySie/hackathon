@@ -294,3 +294,9 @@
   position: absolute;
   bottom: 0;
 }
+.triangle-button {
+  display: inline-block;
+}
+.triangle-button img {
+  height: 52px;
+}
