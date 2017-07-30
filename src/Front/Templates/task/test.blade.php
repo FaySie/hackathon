@@ -26,7 +26,7 @@
         <a href="#" class="btn btn-default">
             上一頁
         </a>
-        <a href="#" class="btn btn-danger pull-right">
+        <a href="@route('result', ['id' => $item->id])" class="btn btn-danger pull-right">
             quit
         </a>
     </div>
@@ -39,16 +39,25 @@
         <p class="text-white">
             情境：您是第一次使用本網站的訪客，想要成為會員領取折價券
         </p>
-        <a href="#" class="btn btn-complete m-r-20">
+        <button class="btn btn-complete m-r-20" type="button" onclick="history.back();">
             Back
-        </a>
-        <a href="#" class="btn btn-complete go-start-test">
+        </button>
+        <button class="btn btn-complete go-start-test" type="button">
             Play
-        </a>
+        </button>
     </div>
 
     {{--開始任務--}}
     <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div id="test-area">
+
+                    @widget('widget.test-area', ['image' => $item->image, 'link' => $item->link], 'edge')
+
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="feedback-row">
                 <div class="emoji">

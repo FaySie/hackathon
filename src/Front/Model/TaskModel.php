@@ -9,6 +9,7 @@
 namespace Front\Model;
 
 use Admin\DataMapper\ProjectMapper;
+use Admin\DataMapper\TaskLinkMapMapper;
 use Admin\DataMapper\TaskMapper;
 use Front\Helper\TaskHelper;
 use Phoenix\Model\ItemModel;
@@ -42,5 +43,7 @@ class TaskModel extends ItemModel
 		$item->project = ProjectMapper::findOne(['id' => $item->project_id]);
 
 		$item->project->tasks = TaskMapper::find(['project_id' => $item->project_id, 'state' => 1, 'id != ' . $item->id], 'ordering ASC');
+
+		$item->link = TaskLinkMapMapper::findOne(['task_id' => $item->id], 'ordering ASC');
 	}
 }

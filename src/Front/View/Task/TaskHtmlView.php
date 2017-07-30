@@ -12,7 +12,9 @@ use Admin\DataMapper\TaskMapper;
 use Admin\Table\Table;
 use Front\Helper\TaskHelper;
 use Lyrasoft\Warder\Table\WarderTable;
+use Phoenix\Script\PhoenixScript;
 use Phoenix\View\ItemView;
+use Windwalker\Core\Router\CoreRouter;
 
 /**
  * The TaskHtmlView class.
@@ -59,6 +61,7 @@ class TaskHtmlView extends ItemView
 	 */
 	protected function prepareScripts()
 	{
+		PhoenixScript::addRoute('next_step', CoreRouter::route('front@next_step', ['task_id' => $this->data->item->id]));
 	}
 
 	/**

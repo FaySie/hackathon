@@ -436,3 +436,9 @@
 .layout-result .emoji.with-dropdown:hover .feedback-text-content {
   display: inline-block;
 }
+#test-area {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
