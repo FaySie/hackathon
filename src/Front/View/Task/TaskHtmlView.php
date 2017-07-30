@@ -8,6 +8,10 @@
 
 namespace Front\View\Task;
 
+use Admin\DataMapper\TaskMapper;
+use Admin\Table\Table;
+use Front\Helper\TaskHelper;
+use Lyrasoft\Warder\Table\WarderTable;
 use Phoenix\View\ItemView;
 
 /**
@@ -34,6 +38,15 @@ class TaskHtmlView extends ItemView
 	protected function prepareData($data)
 	{
 		parent::prepareData($data);
+
+		$data->relateds = TaskMapper::addTable('user', WarderTable::USERS, 'task.created_by = user.id')
+			->addTable('project', Table::PROJECTS, 'task.project_id = project.id')
+			->find(['task.state' => 1, 'task.id != ' . $data->item->id], 'task.created DESC', 0, 6);
+
+		foreach ($data->relateds as $related)
+		{
+			$related->image = TaskHelper::getFirstImage($related->id);
+		}
 
 		$this->prepareScripts();
 		$this->prepareMetadata();

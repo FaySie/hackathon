@@ -9,6 +9,7 @@
 namespace Front\Model;
 
 use Admin\Table\Table;
+use Lyrasoft\Warder\Table\WarderTable;
 use Phoenix\Model\Filter\FilterHelperInterface;
 use Phoenix\Model\ListModel;
 use Windwalker\Query\Query;
@@ -48,7 +49,9 @@ class HomeModel extends ListModel
 	 */
 	protected function configureTables()
 	{
-		$this->addTable('task', Table::TASKS);
+		$this->addTable('task', Table::TASKS)
+			->addTable('user', WarderTable::USERS, 'task.created_by = user.id')
+			->addTable('project', Table::PROJECTS, 'task.project_id = project.id');
 	}
 
 	/**

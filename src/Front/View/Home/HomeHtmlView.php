@@ -13,7 +13,7 @@ use Phoenix\View\ListView;
 
 /**
  * The HomeHtmlView class.
- * 
+ *
  * @since  1.0
  */
 class HomeHtmlView extends ListView
@@ -40,6 +40,23 @@ class HomeHtmlView extends ListView
 		{
 			$item->image = TaskHelper::getFirstImage($item->id);
 		}
+
+		$data->tags = [
+			'Register',
+			'Sign in',
+			'Post',
+			'Log out',
+			'FAQ',
+			'Forget the password',
+			'Verify the email',
+			'Share link',
+			'Landing',
+			'Contact us',
+			'Help center',
+			'Message board',
+			'Game',
+			'Edit',
+		];
 
 		$this->prepareScripts();
 		$this->prepareMetadata();

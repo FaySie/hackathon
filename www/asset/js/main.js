@@ -8,9 +8,9 @@ $(document).ready(function ()
 {
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
-        slidesPerView: 10,
+        slidesPerView: 8,
         paginationClickable: true,
-        spaceBetween: 30,
+        spaceBetween: 15,
         grabCursor: true,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
@@ -19,6 +19,11 @@ $(document).ready(function ()
     $('.add-favorite').on('click', function ()
     {
         $(this).toggleClass('add-success')
+    });
+
+    $('.go-start-test').on('click', function ()
+    {
+        $('.task-intro').addClass('start-test')
     });
 
     // Task Result

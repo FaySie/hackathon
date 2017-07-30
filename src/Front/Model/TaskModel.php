@@ -8,6 +8,8 @@
 
 namespace Front\Model;
 
+use Admin\DataMapper\ProjectMapper;
+use Admin\DataMapper\TaskMapper;
 use Front\Helper\TaskHelper;
 use Phoenix\Model\ItemModel;
 use Windwalker\Data\DataInterface;
@@ -36,5 +38,9 @@ class TaskModel extends ItemModel
 	protected function postGetItem(DataInterface $item)
 	{
 		$item->image = TaskHelper::getFirstImage($item->id);
+
+		$item->project = ProjectMapper::findOne(['id' => $item->project_id]);
+
+		$item->project->tasks = TaskMapper::find(['project_id' => $item->project_id, 'state' => 1, 'id != ' . $item->id], 'ordering ASC');
 	}
 }
