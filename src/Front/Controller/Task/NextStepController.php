@@ -43,7 +43,7 @@ class NextStepController extends AbstractController
 		$link  = TaskLinkMapMapper::addTable('task_image_map', Table::TASK_IMAGE_MAPS, 'task_link_map.image_id = task_image_map.id')
 			->findOne(['task_link_map.task_id' => $taskId, 'task_image_map.image_id' => $linkId]);
 
-		$html = WidgetHelper::render('widget.test-area', ['image' => $image->image, 'link' => $link], 'edge');
+		$html = WidgetHelper::render('widget.test-area', ['image' => $image->image, 'link' => $link, 'task_id' => $taskId], 'edge');
 
 		return ['html' => $html];
 	}

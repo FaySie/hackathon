@@ -93,20 +93,29 @@ class TaskSeeder extends AbstractSeeder
 
 					$taskImage = TaskImageMapMapper::createOne($data);
 
-					$data = new Data;
+					if ($j < count($images) - 1)
+					{
+						$data = new Data;
 
-					$data['project_id'] = $project->id;
-					$data['task_id']    = $task->id;
-					$data['image_id']   = $taskImage->id;
-					$data['link_id']    = $j < count($images) - 1 ? $faker->randomElement($images)->id : '';
-					$data['top']        = 250;
-					$data['left']       = 350;
-					$data['width']      = 100;
-					$data['height']     = 50;
-					$data['ordering']   = 1;
-					$data['params']     = '';
+						do
+						{
+							$image_id = $faker->randomElement($images)->id;
+						}
+						while ($image_id == $taskImage->id);
 
-					TaskLinkMapMapper::createOne($data);
+						$data['project_id'] = $project->id;
+						$data['task_id']    = $task->id;
+						$data['image_id']   = $taskImage->id;
+						$data['link_id']    = $image_id;
+						$data['top']        = 250;
+						$data['left']       = 350;
+						$data['width']      = 100;
+						$data['height']     = 50;
+						$data['ordering']   = 1;
+						$data['params']     = '';
+
+						TaskLinkMapMapper::createOne($data);
+					}
 				}
 
 				$likeUserIds = $faker->randomElements($userIds, $project->likes);

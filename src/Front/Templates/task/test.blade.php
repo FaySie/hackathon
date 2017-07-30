@@ -14,8 +14,8 @@
  *
  * View variables
  * --------------------------------------------------------------
- * @var $item  \Front\Record\TaskRecord
- * @var $state \Windwalker\Structure\Structure
+ * @var $item     \Front\Record\TaskRecord
+ * @var $state    \Windwalker\Structure\Structure
  */
 ?>
 
@@ -51,9 +51,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <div id="test-area">
+                <div id="test-wrapper">
 
-                    @widget('widget.test-area', ['image' => $item->image, 'link' => $item->link], 'edge')
+                    @widget('widget.test-area', ['image' => $item->image, 'link' => $item->link, 'task_id' => $item->id], 'edge')
 
                 </div>
             </div>

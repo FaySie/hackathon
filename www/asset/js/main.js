@@ -31,8 +31,6 @@ window.Test = window.Test || {
      * @param link_id
      */
     nextStep: function (link_id) {
-        console.log('next_step');
-
         $.ajax({
             method: "POST",
             url: Phoenix.Router.route('next_step'),
@@ -42,7 +40,7 @@ window.Test = window.Test || {
         }).done(function (result) {
             if (result.success)
             {
-                $('#test-area').html(result.data.html);
+                $('#test-wrapper').html(result.data.html);
             }
         });
     }
