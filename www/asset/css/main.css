@@ -9,6 +9,9 @@
   font-size: 16px;
   font-weight: bold;
 }
+.test-link {
+  background: rgba(69, 173, 202, 0.65);
+}
 .btn-default {
   color: #45adca;
   background-color: transparent;
@@ -661,52 +664,43 @@ textarea {
   bottom: 30px;
   left: 30px;
 }
-.layout-test .feedback-text-content {
-  display: none;
-  bottom: 30px;
-  left: 0;
-  position: absolute;
-}
-.layout-test .feedback-text-content ul {
-  padding-left: 0;
-  list-style: none;
-}
-.layout-test .emoji {
-  display: inline-block;
-}
-.layout-test .emoji label {
-  opacity: .5;
-  cursor: pointer;
-  font-size: 20px;
-  margin: 5px;
-}
-.layout-test .emoji label i:hover {
-  opacity: 1;
-}
-.layout-test .emoji input {
-  display: none;
-}
-.layout-test .emoji input:checked + label {
-  opacity: 1;
-}
-.layout-test .emoji.with-dropdown:hover .feedback-text-content {
-  display: inline-block;
-}
-<<<<<<< HEAD
-=======
 .layout-test .bottom-footer {
   background-image: linear-gradient(91deg, #1c3d46, #1a2133);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   width: 100%;
   height: 28px;
 }
-.triangle-button {
+.feedback-text-content {
+  display: none;
+  bottom: 30px;
+  left: 0;
+  position: absolute;
+}
+.feedback-text-content ul {
+  padding-left: 0;
+  list-style: none;
+}
+.emoji {
   display: inline-block;
 }
-.triangle-button img {
-  height: 52px;
+.emoji label {
+  opacity: .5;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 5px;
 }
->>>>>>> staging
+.emoji label i:hover {
+  opacity: 1;
+}
+.emoji input {
+  display: none;
+}
+.emoji input:checked + label {
+  opacity: 1;
+}
+.emoji.with-dropdown:hover .feedback-text-content {
+  display: inline-block;
+}
 .layout-result .sidebar {
   position: absolute;
   height: 100%;
