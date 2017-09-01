@@ -97,11 +97,7 @@ class TaskSeeder extends AbstractSeeder
 					{
 						$data = new Data;
 
-						do
-						{
-							$image_id = $faker->randomElement($images)->id;
-						}
-						while ($image_id == $taskImage->id);
+						$image_id = $images[$j + 1]->id;
 
 						$data['project_id'] = $project->id;
 						$data['task_id']    = $task->id;

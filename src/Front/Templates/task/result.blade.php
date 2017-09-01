@@ -88,7 +88,7 @@
                         <div class="records">
                             <div class="inner">
                                 <div class="slider-for" id="aniimated-thumbnials">
-                                    <img src="{{ $item->image }}" alt="Image" class="aniimated-item">
+                                    <img src="https://lyratest.s3.amazonaws.com/hackathon/images/projects/Group+6.png" alt="Image" class="aniimated-item">
                                     <img src="{{ $item->image }}" alt="Image" class="aniimated-item">
                                     <img src="{{ $item->image }}" alt="Image" class="aniimated-item">
                                     <img src="{{ $item->image }}" alt="Image" class="aniimated-item">
@@ -97,7 +97,7 @@
                                 </div>
                                 <div class="slider-nav">
                                     <div class="item">
-                                        <img src="{{ $item->image }}" alt="Image">
+                                        <img src="https://lyratest.s3.amazonaws.com/hackathon/images/projects/Group+6.png" alt="Image">
                                     </div>
                                     <div class="item">
                                         <img src="{{ $item->image }}" alt="Image">
